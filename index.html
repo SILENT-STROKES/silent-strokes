@@ -1,0 +1,3420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Silent Strokes — B Sailakshanth | Artist & Creator</title>
+
+  <meta
+    name="description"
+    content="Silent Strokes — the creative portfolio of B Sailakshanth featuring anime art, sketches, illustrations, drawing videos and creative experiments."
+  >
+
+  <meta
+    name="keywords"
+    content="Silent Strokes, B Sailakshanth, anime art, anime drawings, sketches, artist, drawing videos, illustrations"
+  >
+
+  <meta name="author" content="B Sailakshanth">
+
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Silent Strokes — B Sailakshanth">
+  <meta
+    property="og:description"
+    content="Where Every Stroke Tells a Story."
+  >
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.5;
+      overflow-x: hidden;
+      transition: background .35s ease, color .35s ease;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: #111;
+      color: #fff;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 60px));
+      margin: auto;
+    }
+
+
+    /* =====================================================
+       LOADING SCREEN
+    ===================================================== */
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+
+    .loader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-inner {
+      text-align: center;
+    }
+
+    .loader-logo {
+      width: 65px;
+      height: 65px;
+      border-radius: 14px;
+      object-fit: cover;
+      margin: 0 auto 20px;
+    }
+
+    .loader-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 5px;
+    }
+
+    .loader-line {
+      width: 120px;
+      height: 1px;
+      background: #555;
+      margin: 18px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loader-line::after {
+      content: "";
+      position: absolute;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      animation: loaderMove 1.2s infinite;
+    }
+
+    @keyframes loaderMove {
+      to {
+        left: 100%;
+      }
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .logo-image {
+      width: 45px;
+      height: 45px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .logo-text {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #555;
+      transition: color .25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: #111;
+      transition: width .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #111;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .theme-button {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: .25s ease;
+    }
+
+    .theme-button:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .menu-button {
+      display: none;
+      border: 1px solid #ddd;
+      background: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+
+    /* =====================================================
+       COMMON
+    ===================================================== */
+
+    section {
+      position: relative;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #888;
+    }
+
+    .section-title {
+      font-size: clamp(45px, 6vw, 78px);
+      line-height: .95;
+      letter-spacing: -4px;
+      font-weight: 300;
+      margin-top: 18px;
+    }
+
+    .section-title strong {
+      font-weight: 800;
+      background: linear-gradient(
+        90deg,
+        #111,
+        #b00000,
+        #e00000
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    #home {
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 15% 25%,
+          rgba(180,0,0,.10),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #fff 0%,
+          #fffafa 50%,
+          #f3f3f3 100%
+        );
+    }
+
+    #home::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      right: -180px;
+      top: -100px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(192,0,0,.08),
+          transparent 70%
+        );
+      pointer-events: none;
+    }
+
+    #home::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      left: -150px;
+      bottom: -150px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,0,0,.06),
+          transparent 70%
+        );
+      pointer-events: none;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #777;
+      animation: fadeUp .8s ease both;
+    }
+
+    .hero h1 {
+      margin-top: 20px;
+      font-size: clamp(70px, 13vw, 155px);
+      line-height: .78;
+      letter-spacing: -9px;
+      font-weight: 800;
+      animation: fadeUp .9s .1s ease both;
+    }
+
+    .hero h1 span {
+      display: block;
+      background:
+        linear-gradient(
+          100deg,
+          #111,
+          #b00000,
+          #e00000
+        );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title {
+      margin-top: 35px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 28px;
+      animation: fadeUp .9s .2s ease both;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 20px;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+      animation: fadeUp .9s .3s ease both;
+    }
+
+    .hero-description strong {
+      color: #111;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      animation: fadeUp .9s .4s ease both;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid #111;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: .3s ease;
+    }
+
+    .button.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,.12);
+    }
+
+    .button:not(.primary):hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      right: 0;
+      bottom: 35px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #888;
+      font-size: 9px;
+      letter-spacing: 2px;
+      writing-mode: vertical-rl;
+    }
+
+    .scroll-indicator::before {
+      content: "";
+      width: 1px;
+      height: 50px;
+      background: #aaa;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-section {
+      padding: 120px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .about-profile {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .profile-wrapper {
+      position: relative;
+    }
+
+    .profile-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -15px;
+      border: 1px solid #ddd;
+      border-radius: 22px;
+      z-index: -1;
+    }
+
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+      filter: grayscale(100%);
+      transition: .5s ease;
+    }
+
+    .profile-image:hover {
+      filter: grayscale(0%);
+      transform: scale(1.015);
+    }
+
+    .about-content h2 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -3px;
+      margin: 15px 0 25px;
+    }
+
+    .about-content h2 strong {
+      font-weight: 800;
+    }
+
+    .about-content p {
+      max-width: 680px;
+      color: #666;
+      line-height: 1.85;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .about-cards {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .about-card {
+      padding: 35px 30px;
+      border-right: 1px solid #ddd;
+    }
+
+    .about-card:last-child {
+      border-right: none;
+    }
+
+    .about-card-number {
+      font-size: 10px;
+      color: #999;
+      letter-spacing: 2px;
+    }
+
+    .about-card h3 {
+      margin-top: 25px;
+      font-size: 19px;
+    }
+
+    .about-card p {
+      margin-top: 10px;
+      color: #777;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-section {
+      padding: 110px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 55px;
+    }
+
+    .gallery-subtitle {
+      color: #777;
+      font-size: 13px;
+      max-width: 300px;
+      line-height: 1.7;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #eee;
+      cursor: pointer;
+      aspect-ratio: 1 / 1;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+      transform: translateY(30px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        transform .6s ease,
+        filter .5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(.65);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      padding: 25px;
+      color: #fff;
+      opacity: 0;
+      transition: .35s ease;
+      background:
+        linear-gradient(
+          transparent 30%,
+          rgba(0,0,0,.75)
+        );
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay span {
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+
+    /* =====================================================
+       CURRENTLY CREATING
+    ===================================================== */
+
+    .creating-section {
+      padding: 70px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .creating-card {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 60px;
+      padding: 35px 40px;
+      border: 1px solid #ddd;
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          135deg,
+          #fff,
+          #fff8f8
+        );
+      box-shadow: 0 12px 40px rgba(0,0,0,.05);
+      transition: .3s ease;
+    }
+
+    .creating-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.09);
+    }
+
+    .creating-left h2 {
+      margin-top: 12px;
+      font-size: 34px;
+      font-weight: 300;
+      letter-spacing: -1px;
+    }
+
+    .creating-left h2 strong {
+      font-weight: 800;
+      background:
+        linear-gradient(
+          90deg,
+          #111,
+          #b00000,
+          #e00000
+        );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .creating-left p {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .creating-status,
+    .creating-update {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-left: 30px;
+      border-left: 1px solid #ddd;
+    }
+
+    .creating-status small,
+    .creating-update small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #888;
+    }
+
+    .creating-status strong,
+    .creating-update strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #c00000;
+      box-shadow: 0 0 0 5px rgba(192,0,0,.10);
+      animation: statusPulse 2s infinite;
+    }
+
+    @keyframes statusPulse {
+      0%,100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: .4;
+      }
+    }
+
+
+    /* =====================================================
+       VIDEOS
+    ===================================================== */
+
+    .videos-section {
+      padding: 110px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .video-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      background: #fff;
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-7px);
+      border-color: #aaa;
+      box-shadow: 0 20px 50px rgba(0,0,0,.10);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        transform .5s ease,
+        filter .4s ease;
+    }
+
+    .video-card:hover .video-thumbnail img {
+      transform: scale(1.06);
+      filter: brightness(.72);
+    }
+
+    .play-button,
+    .reel-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      color: #111;
+      font-size: 18px;
+      padding-left: 3px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      transition: .3s ease;
+      z-index: 2;
+    }
+
+    .video-card:hover .play-button,
+    .video-card:hover .reel-play {
+      transform:
+        translate(-50%,-50%)
+        scale(1.1);
+    }
+
+    .video-badge {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      background: rgba(0,0,0,.72);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      backdrop-filter: blur(8px);
+    }
+
+    .video-info {
+      padding: 25px;
+    }
+
+    .video-category {
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #777;
+    }
+
+    .video-info h3 {
+      margin: 12px 0 8px;
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .video-info p {
+      margin: 0;
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .watch-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      background:
+        linear-gradient(
+          90deg,
+          #111,
+          #b00000,
+          #e00000
+        );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+    /* =====================================================
+       INSTAGRAM
+    ===================================================== */
+
+    .instagram-reel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(
+          135deg,
+          #111,
+          #5b174f,
+          #b51d5d,
+          #ff8a3d
+        );
+    }
+
+    .instagram-icon {
+      position: absolute;
+      font-size: 76px;
+      color: rgba(255,255,255,.95);
+      line-height: 1;
+    }
+
+    .instagram-link {
+      background:
+        linear-gradient(
+          90deg,
+          #e1306c,
+          #833ab4,
+          #ff8a3d
+        );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+    /* =====================================================
+       BLOG
+    ===================================================== */
+
+    .blog-section {
+      padding: 110px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .blog-card {
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      padding: 35px;
+      transition: .3s ease;
+      background:
+        linear-gradient(
+          145deg,
+          #fff,
+          #fff8f8
+        );
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      border-color: #aaa;
+      box-shadow: 0 18px 45px rgba(0,0,0,.07);
+    }
+
+    .blog-number {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #888;
+    }
+
+    .blog-card h3 {
+      font-size: 25px;
+      line-height: 1.2;
+      margin: 45px 0 18px;
+    }
+
+    .blog-card p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #a00000;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-section {
+      padding: 110px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .contact-title {
+      font-size: 65px;
+      line-height: .95;
+      font-weight: 300;
+      letter-spacing: -4px;
+      margin: 20px 0 30px;
+    }
+
+    .contact-title strong {
+      font-weight: 800;
+    }
+
+    .contact-description {
+      color: #666;
+      max-width: 500px;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-link {
+      padding: 22px 25px;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: .25s ease;
+    }
+
+    .contact-link:hover {
+      transform: translateX(5px);
+      border-color: #999;
+      background: #fff8f8;
+    }
+
+    .contact-link strong {
+      font-size: 15px;
+    }
+
+    .contact-link span {
+      font-size: 12px;
+      color: #777;
+      text-align: right;
+    }
+
+
+    /* =====================================================
+       SOCIAL MEDIA
+    ===================================================== */
+
+    .social-section {
+      padding: 100px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .social-header {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .social-header h2 {
+      font-size: 48px;
+      font-weight: 300;
+      margin-top: 18px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 14px;
+    }
+
+    .social-card {
+      min-height: 130px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: .25s ease;
+      text-align: center;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      background:
+        linear-gradient(
+          145deg,
+          #fff,
+          #fff4f4
+        );
+      box-shadow: 0 15px 35px rgba(0,0,0,.07);
+    }
+
+    .social-icon {
+      font-size: 25px;
+    }
+
+    .social-card strong {
+      font-size: 15px;
+    }
+
+    .social-card span {
+      font-size: 11px;
+      color: #777;
+    }
+
+
+    /* =====================================================
+       QUOTE
+    ===================================================== */
+
+    .quote-section {
+      text-align: center;
+      padding: 100px 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .quote-section blockquote {
+      max-width: 950px;
+      margin: auto;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px,5vw,52px);
+      line-height: 1.2;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -2px;
+    }
+
+    .quote-section span {
+      display: block;
+      margin-top: 25px;
+      color: #777;
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-image {
+      width: 35px;
+      height: 35px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-size: 14px;
+    }
+
+    .footer-text {
+      color: #777;
+      font-size: 12px;
+      text-align: right;
+    }
+
+
+    /* =====================================================
+       LIGHTBOX
+    ===================================================== */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      background: rgba(0,0,0,.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s ease;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+      transform: scale(.92);
+      transition: .3s ease;
+    }
+
+    .lightbox.active img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.4);
+      background: transparent;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    .back-top {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: #111;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: .3s ease;
+      z-index: 500;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       BLACK & WHITE MODE
+    ===================================================== */
+
+    body.bw {
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    body.bw header {
+      background: rgba(245,245,245,.9);
+    }
+
+    body.bw #home {
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #eeeeee 50%,
+          #d7d7d7 100%
+        );
+      color: #111;
+    }
+
+    body.bw #home::before {
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,0,0,.10),
+          transparent 70%
+        );
+    }
+
+    body.bw #home::after {
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,0,0,.06),
+          transparent 70%
+        );
+    }
+
+    body.bw #home .label {
+      color: #777;
+    }
+
+    body.bw #home .hero h1 {
+      color: #111;
+    }
+
+    body.bw #home .hero h1 span {
+      background:
+        linear-gradient(
+          100deg,
+          #111,
+          #555,
+          #000
+        );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.bw #home .hero-title {
+      color: #111;
+    }
+
+    body.bw #home .hero-description {
+      color: #666;
+    }
+
+    body.bw #home .hero-description strong {
+      color: #111;
+    }
+
+    body.bw #home .button {
+      color: #111;
+      border-color: #111;
+    }
+
+    body.bw #home .button.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    body.bw #home .button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+
+    /* =====================================================
+       MOBILE NAV
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: calc(100% + 10px);
+        padding: 25px;
+        background: rgba(255,255,255,.98);
+        border: 1px solid #ddd;
+        border-radius: 18px;
+        box-shadow: 0 20px 50px rgba(0,0,0,.10);
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: .3s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        padding: 8px 0;
+      }
+
+      .theme-button {
+        margin-top: 5px;
+      }
+
+      .about-profile,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .profile-image {
+        max-width: 400px;
+      }
+
+      .contact-layout {
+        gap: 45px;
+      }
+
+      .video-grid,
+      .blog-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(3,1fr);
+      }
+
+      .creating-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .creating-status,
+      .creating-update {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-left: 0;
+        padding-top: 20px;
+      }
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: min(100% - 40px, 650px);
+      }
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero h1 {
+        font-size: 70px;
+        letter-spacing: -5px;
+      }
+
+      .hero-title {
+        font-size: 21px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+      }
+
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(5) {
+        transform: none;
+      }
+
+      .about-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .about-card:last-child {
+        border-bottom: none;
+      }
+
+      .video-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .contact-title {
+        font-size: 50px;
+      }
+
+      .contact-link {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-link span {
+        text-align: left;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-text {
+        text-align: center;
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .logo-image {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      #home {
+        padding: 35px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+        letter-spacing: -4px;
+      }
+
+      .hero-title {
+        font-size: 19px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .creating-card {
+        padding: 28px 22px;
+      }
+
+      .creating-left h2 {
+        font-size: 28px;
+      }
+
+      .section-title {
+        letter-spacing: -3px;
+      }
+
+      .contact-title {
+        font-size: 45px;
+      }
+
+      .quote-section {
+        padding: 80px 15px;
+      }
+
+    }
+
+  
+
+    /* =====================================================
+       SUBSCRIBERS & FOLLOWERS — INTEGRATED SECTION
+    ===================================================== */
+    #community { padding: 110px 0; background: #f7f7f7; }
+    #community .community-heading { max-width: 760px; margin: 0 auto 55px; text-align: center; }
+    #community .community-heading p { max-width: 600px; margin: 24px auto 0; color: #666; }
+    #community .community-total { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 32px; }
+    #community .community-total-number { font-size: clamp(48px, 7vw, 82px); line-height: 1; font-weight: 800; letter-spacing: -4px; }
+    #community .community-total-caption { font-size: 10px; font-weight: 800; letter-spacing: 3px; color: #888; }
+    #community .community-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+    #community .community-card { position: relative; overflow: hidden; border: 1px solid #e5e5e5; border-radius: 26px; padding: 36px; background: #fff; display: flex; flex-direction: column; gap: 25px; transition: transform .35s ease, box-shadow .35s ease; }
+    #community .community-card:hover { transform: translateY(-6px); box-shadow: 0 25px 60px rgba(0,0,0,.08); }
+    #community .community-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 4px; }
+    #community .community-youtube::before { background: #e00000; }
+    #community .community-instagram::before { background: linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+    #community .community-platform-top { display: flex; align-items: center; gap: 15px; }
+    #community .community-icon { width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center; color: #fff; flex-shrink: 0; font-size: 25px; font-weight: 800; }
+    #community .community-youtube .community-icon { background: #e00000; }
+    #community .community-instagram .community-icon { background: linear-gradient(45deg,#fa7e1e,#d62976,#962fbf); }
+    #community .community-platform-name { font-size: 10px; font-weight: 800; letter-spacing: 3px; color: #888; }
+    #community .community-handle { font-size: 15px; font-weight: 700; overflow-wrap: anywhere; }
+    #community .community-stat-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    #community .community-stat-value { font-size: clamp(34px,4.5vw,52px); font-weight: 800; letter-spacing: -2px; line-height: 1; }
+    #community .community-stat-label { margin-top: 8px; font-size: 10px; font-weight: 800; letter-spacing: 2px; color: #888; }
+    #community .community-milestone { display: flex; flex-direction: column; gap: 10px; }
+    #community .community-milestone-text { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; color: #666; }
+    #community .community-milestone-text strong { color: #111; }
+    #community .community-progress { height: 8px; border-radius: 10px; background: #eee; overflow: hidden; }
+    #community .community-progress-bar { width: 0; height: 100%; border-radius: 10px; transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+    #community .community-youtube .community-progress-bar { background: #e00000; }
+    #community .community-instagram .community-progress-bar { background: linear-gradient(90deg,#fa7e1e,#d62976,#962fbf); }
+    #community .community-button { display: inline-flex; align-items: center; justify-content: center; align-self: flex-start; min-height: 46px; padding: 0 20px; border-radius: 30px; background: #111; border: 1px solid #111; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1px; transition: .25s ease; }
+    #community .community-youtube .community-button { background: #e00000; border-color: #e00000; }
+    #community .community-instagram .community-button { background: linear-gradient(45deg,#fa7e1e,#d62976,#962fbf); border-color: transparent; }
+    #community .community-button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+    body.bw #community { background: #eee; }
+    body.bw #community .community-card { filter: grayscale(1); }
+    @media (max-width: 760px) { #community { padding: 80px 0; } #community .community-grid { grid-template-columns: 1fr; } #community .community-card { padding: 28px; } }
+
+
+    /* =====================================================
+       SILENT STROKES DRAWING PAD
+    ====================================================== */
+    #drawing-pad { padding: 100px 0; background: #f6f6f6; color: #111; }
+    #drawing-pad .draw-heading { max-width: 720px; margin: 0 auto 34px; text-align: center; }
+    #drawing-pad .draw-heading p { margin-top: 14px; color: #707070; font-size: 14px; }
+    #drawing-pad .draw-workspace { max-width: 1000px; margin: auto; background: #fff; border: 1px solid #e7e7e7; border-radius: 22px; padding: 18px; box-shadow: 0 18px 55px rgba(0,0,0,.06); }
+    #drawing-pad .draw-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    #drawing-pad .draw-tool-group { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+    #drawing-pad .draw-tool-label { font-size: 10px; font-weight: 800; letter-spacing: 1px; color: #777; }
+    #drawing-pad .draw-btn { min-height: 38px; padding: 0 13px; border: 1px solid #ddd; border-radius: 10px; background: #fff; color: #111; font-size: 12px; font-weight: 700; cursor: pointer; transition: .2s ease; }
+    #drawing-pad .draw-btn:hover, #drawing-pad .draw-btn.active { background: #111; border-color: #111; color: #fff; }
+    #drawing-pad input[type="color"] { width: 38px; height: 38px; padding: 3px; border: 1px solid #ddd; border-radius: 10px; background: white; cursor: pointer; }
+    #drawing-pad input[type="range"] { width: 110px; accent-color: #111; cursor: pointer; }
+    #drawing-pad .draw-size-value { min-width: 25px; font-size: 12px; color: #555; }
+    #drawing-pad .draw-canvas-wrap { overflow: hidden; border: 1px solid #e3e3e3; border-radius: 14px; background: #fff; }
+    #drawing-pad canvas { display: block; width: 100%; height: 430px; background: #fff; touch-action: none; cursor: crosshair; }
+    #drawing-pad .draw-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 13px; }
+    #drawing-pad .draw-hint { color: #888; font-size: 11px; }
+    #drawing-pad .draw-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    #drawing-pad .draw-btn.primary { background: #e00000; color: #fff; border-color: #e00000; }
+    #drawing-pad .draw-btn.primary:hover { background: #b90000; }
+    body.bw #drawing-pad { background: #e9e9e9; }
+    @media (max-width: 600px) { #drawing-pad { padding: 72px 0; } #drawing-pad .draw-workspace { padding: 10px; border-radius: 15px; } #drawing-pad canvas { height: 340px; } #drawing-pad .draw-toolbar { align-items: flex-start; } #drawing-pad .draw-tool-group { width: 100%; } #drawing-pad .draw-bottom { align-items: flex-start; flex-direction: column; } }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       LOADER
+  ====================================================== -->
+
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+
+      <img
+        class="loader-logo"
+        src="https://i.postimg.cc/W4cLzm9P/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg"
+        alt="Silent Strokes Logo"
+      >
+
+      <div class="loader-title">
+        SILENT STROKES
+      </div>
+
+      <div class="loader-line"></div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header>
+
+    <div class="container nav-inner">
+
+      <a href="#home" class="brand">
+
+        <img
+          class="logo-image"
+          src="https://i.postimg.cc/W4cLzm9P/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg"
+          alt="Silent Strokes Logo"
+        >
+
+        <span class="logo-text">
+          SILENT STROKES
+        </span>
+
+      </a>
+
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#drawing-pad">Drawing Pad</a>
+        <a href="#videos">Videos</a>
+        <a href="#blog">Blog</a>
+        <a href="#community">Subscribers</a>
+        <a href="#contact">Contact</a>
+
+        <button
+          class="theme-button"
+          id="themeButton"
+          type="button"
+        >
+          BLACK & WHITE
+        </button>
+
+      </nav>
+
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HOME
+  ====================================================== -->
+
+  <main>
+
+    <section id="home">
+
+      <div class="container hero">
+
+        <span class="label">
+          WELCOME TO
+        </span>
+
+        <h1>
+          SILENT
+          <span>STROKES</span>
+        </h1>
+
+        <div class="hero-title">
+          Where Every Stroke Tells a Story.
+        </div>
+
+        <p class="hero-description">
+          I’m <strong>B SAILAKSHANTH</strong> —
+          a student, artist, and creator sharing my passion
+          for <strong>anime art, sketches, illustrations, and videos.</strong>
+        </p>
+
+        <div class="buttons">
+
+          <a href="#gallery" class="button primary">
+            EXPLORE ARTWORK
+          </a>
+
+          <a href="#about" class="button">
+            ABOUT ME
+          </a>
+
+        </div>
+
+        <div class="scroll-indicator">
+          SCROLL
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about-section" id="about">
+
+      <div class="container">
+
+        <div class="about-profile reveal">
+
+          <div class="profile-wrapper">
+
+            <img
+              class="profile-image"
+              src="https://i.postimg.cc/HnZ4QQ8q/Whats-App-Image-2026-08-27-at-6-07-45-PM.jpg"
+              alt="B Sailakshanth"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="about-content">
+
+            <span class="section-label">
+              ABOUT ME
+            </span>
+
+            <h2>
+              Student.
+              Artist.
+              <strong>Creator.</strong>
+            </h2>
+
+            <p>
+              I’m <strong>B SAILAKSHANTH</strong>,
+              the creator behind <strong>Silent Strokes.</strong>
+            </p>
+
+            <p>
+              I’m a student who enjoys balancing my studies
+              with my passion for drawing and creativity.
+              I love creating anime art, sketches,
+              illustrations, and drawing videos.
+            </p>
+
+            <p>
+              My studies help me build knowledge and skills
+              for the future, while art gives me a space
+              to explore ideas, experiment, and express myself.
+            </p>
+
+            <p>
+              Every drawing is another opportunity to learn
+              something new, improve my skills, and keep
+              moving forward.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-cards reveal">
+
+          <div class="about-card">
+
+            <span class="about-card-number">
+              01
+            </span>
+
+            <h3>
+              My Life
+            </h3>
+
+            <p>
+              Learning, creating, exploring new ideas,
+              and enjoying the journey.
+            </p>
+
+          </div>
+
+
+          <div class="about-card">
+
+            <span class="about-card-number">
+              02
+            </span>
+
+            <h3>
+              My Studies
+            </h3>
+
+            <p>
+              Building knowledge and skills for my future
+              while continuing my creative journey.
+            </p>
+
+          </div>
+
+
+          <div class="about-card">
+
+            <span class="about-card-number">
+              03
+            </span>
+
+            <h3>
+              My Art
+            </h3>
+
+            <p>
+              Anime, sketches, illustrations,
+              drawing videos, and creative experiments.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <section class="gallery-section" id="gallery">
+
+      <div class="container">
+
+        <div class="gallery-header reveal">
+
+          <div>
+
+            <span class="section-label">
+              MY WORK
+            </span>
+
+            <h2 class="section-title">
+              The <strong>Gallery.</strong>
+            </h2>
+
+          </div>
+
+          <p class="gallery-subtitle">
+            A collection of drawings, sketches,
+            illustrations and creative experiments
+            from Silent Strokes.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+          <div
+            class="gallery-item reveal"
+            data-image="https://i.postimg.cc/0yX7nbqc/1000107721-%281%29.webp"
+          >
+
+            <img
+              src="https://i.postimg.cc/0yX7nbqc/1000107721-%281%29.webp"
+              alt="Silent Strokes Artwork 1"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>ARTWORK 01</span>
+            </div>
+
+          </div>
+
+
+          <div
+            class="gallery-item reveal"
+            data-image="https://i.postimg.cc/SN6hcMCD/Whats-App-Image-2026-08-27-at-9-50-29-PM.jpg"
+          >
+
+            <img
+              src="https://i.postimg.cc/SN6hcMCD/Whats-App-Image-2026-08-27-at-9-50-29-PM.jpg"
+              alt="Silent Strokes Artwork 2"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>ARTWORK 02</span>
+            </div>
+
+          </div>
+
+
+          <div
+            class="gallery-item reveal"
+            data-image="https://i.postimg.cc/xTYGTwRC/1000098912.avif"
+          >
+
+            <img
+              src="https://i.postimg.cc/xTYGTwRC/1000098912.avif"
+              alt="Silent Strokes Artwork 3"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>ARTWORK 03</span>
+            </div>
+
+          </div>
+
+
+          <div
+            class="gallery-item reveal"
+            data-image="https://i.postimg.cc/7h1gn9x4/1000098414.avif"
+          >
+
+            <img
+              src="https://i.postimg.cc/7h1gn9x4/1000098414.avif"
+              alt="Silent Strokes Artwork 4"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>ARTWORK 04</span>
+            </div>
+
+          </div>
+
+
+          <div
+            class="gallery-item reveal"
+            data-image="https://i.postimg.cc/J0dSYHBB/Whats-App-Image-2026-08-27-at-5-57-08-PM.jpg"
+          >
+
+            <img
+              src="https://i.postimg.cc/J0dSYHBB/Whats-App-Image-2026-08-27-at-5-57-08-PM.jpg"
+              alt="Silent Strokes Artwork 5"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>ARTWORK 05</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CURRENTLY CREATING
+    ====================================================== -->
+
+    <section class="creating-section">
+
+      <div class="container">
+
+        <div class="creating-card reveal">
+
+          <div class="creating-left">
+
+            <span class="section-label">
+              CURRENTLY CREATING
+            </span>
+
+            <h2>
+              Anime <strong>Artwork</strong>
+            </h2>
+
+            <p>
+              A new artwork is currently in progress.
+            </p>
+
+          </div>
+
+
+          <div class="creating-status">
+
+            <div class="status-dot"></div>
+
+            <div>
+
+              <small>
+                STATUS
+              </small>
+
+              <strong>
+                In Progress
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="creating-update">
+
+            <div>
+
+              <small>
+                NEXT UPDATE
+              </small>
+
+              <strong>
+                Soon
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VIDEOS
+    ====================================================== -->
+
+    <section class="videos-section" id="videos">
+
+      <div class="container">
+
+        <div class="gallery-header reveal">
+
+          <div>
+
+            <span class="section-label">
+              WATCH
+            </span>
+
+            <h2 class="section-title">
+              Latest <strong>Videos.</strong>
+            </h2>
+
+          </div>
+
+          <p class="gallery-subtitle">
+            Watch my latest drawing videos,
+            edits and creative shorts.
+          </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+          <!-- VIDEO 1 -->
+
+          <a
+            class="video-card reveal"
+            href="https://www.youtube.com/watch?v=ljAcC4oDMnc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="video-thumbnail">
+
+              <img
+                src="https://i.ytimg.com/vi/ljAcC4oDMnc/hqdefault.jpg"
+                alt="Popular Silent Strokes YouTube Short"
+                loading="lazy"
+              >
+
+              <div class="video-badge">
+                YOUTUBE • SHORT
+              </div>
+
+              <div class="play-button">
+                ▶
+              </div>
+
+            </div>
+
+            <div class="video-info">
+
+              <span class="video-category">
+                YOUTUBE
+              </span>
+
+              <h3>
+                Popular Short
+              </h3>
+
+              <p>
+                Watch my famous creation on YouTube.
+              </p>
+
+              <span class="watch-link">
+                Watch on YouTube →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- VIDEO 2 -->
+
+          <a
+            class="video-card reveal"
+            href="https://www.youtube.com/watch?v=uiuFuiITKDg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="video-thumbnail">
+
+              <img
+                src="https://i.ytimg.com/vi/uiuFuiITKDg/hqdefault.jpg"
+                alt="Mass Edited Silent Strokes Short"
+                loading="lazy"
+              >
+
+              <div class="video-badge">
+                YOUTUBE • SHORT
+              </div>
+
+              <div class="play-button">
+                ▶
+              </div>
+
+            </div>
+
+            <div class="video-info">
+
+              <span class="video-category">
+                YOUTUBE
+              </span>
+
+              <h3>
+                Mass Edited Short
+              </h3>
+
+              <p>
+                Watch another Silent Strokes creation.
+              </p>
+
+              <span class="watch-link">
+                Watch on YouTube →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- VIDEO 3 -->
+
+          <a
+            class="video-card reveal"
+            href="https://www.youtube.com/watch?v=YfnktawTQi8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="video-thumbnail">
+
+              <img
+                src="https://i.ytimg.com/vi/YfnktawTQi8/hqdefault.jpg"
+                alt="Silent Strokes Drawing Short"
+                loading="lazy"
+              >
+
+              <div class="video-badge">
+                YOUTUBE • SHORT
+              </div>
+
+              <div class="play-button">
+                ▶
+              </div>
+
+            </div>
+
+            <div class="video-info">
+
+              <span class="video-category">
+                YOUTUBE
+              </span>
+
+              <h3>
+                Another Drawing Short
+              </h3>
+
+              <p>
+                Another Silent Strokes creation.
+              </p>
+
+              <span class="watch-link">
+                Watch on YouTube →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- INSTAGRAM 1 -->
+
+          <a
+            class="video-card reveal"
+            href="https://www.instagram.com/reel/DTKXwlyEV4jMAjC21_FShTLf0BOKr8DL9Yxw3U0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="video-thumbnail instagram-reel">
+
+              <div class="instagram-icon">
+                ◎
+              </div>
+
+              <div class="video-badge">
+                INSTAGRAM • REEL
+              </div>
+
+              <div class="reel-play">
+                ▶
+              </div>
+
+            </div>
+
+            <div class="video-info">
+
+              <span class="video-category instagram-link">
+                INSTAGRAM
+              </span>
+
+              <h3>
+                Latest Instagram Reel
+              </h3>
+
+              <p>
+                Watch my latest creation on Instagram.
+              </p>
+
+              <span class="watch-link instagram-link">
+                Watch on Instagram →
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- INSTAGRAM 2 -->
+
+          <a
+            class="video-card reveal"
+            href="https://www.instagram.com/reel/DSQFivWk0uL9tI8zfR7no7bmnGnvz3MbvOnvkQ0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="video-thumbnail instagram-reel">
+
+              <div class="instagram-icon">
+                ◎
+              </div>
+
+              <div class="video-badge">
+                INSTAGRAM • REEL
+              </div>
+
+              <div class="reel-play">
+                ▶
+              </div>
+
+            </div>
+
+            <div class="video-info">
+
+              <span class="video-category instagram-link">
+                INSTAGRAM
+              </span>
+
+              <h3>
+                Viral Drawing Edit
+              </h3>
+
+              <p>
+                #sailaksh_drawin #viral #edits #drawing
+              </p>
+
+              <span class="watch-link instagram-link">
+                Watch on Instagram →
+              </span>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BLOG
+    ====================================================== -->
+
+    <section class="blog-section" id="blog">
+
+      <div class="container">
+
+        <div class="gallery-header reveal">
+
+          <div>
+
+            <span class="section-label">
+              FROM MY JOURNAL
+            </span>
+
+            <h2 class="section-title">
+              The <strong>Blog.</strong>
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="blog-grid">
+
+
+          <article class="blog-card reveal">
+
+            <span class="blog-number">
+              01 / CREATIVE JOURNEY
+            </span>
+
+            <h3>
+              How I Started Drawing
+            </h3>
+
+            <p>
+              A short look at how my interest in drawing
+              began and how it became part of my
+              creative journey.
+            </p>
+
+            <a href="#home">
+              READ ARTICLE →
+            </a>
+
+          </article>
+
+
+          <article class="blog-card reveal">
+
+            <span class="blog-number">
+              02 / ART
+            </span>
+
+            <h3>
+              My Approach to Anime Art
+            </h3>
+
+            <p>
+              Exploring the ideas, inspiration,
+              and techniques behind the anime artwork
+              I create.
+            </p>
+
+            <a href="#home">
+              READ ARTICLE →
+            </a>
+
+          </article>
+
+
+          <article class="blog-card reveal">
+
+            <span class="blog-number">
+              03 / STUDENT LIFE
+            </span>
+
+            <h3>
+              Balancing Studies and Creativity
+            </h3>
+
+            <p>
+              How I make time for creativity while
+              continuing to focus on school and learning.
+            </p>
+
+            <a href="#home">
+              READ ARTICLE →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact-section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-layout">
+
+
+          <div class="reveal">
+
+            <span class="section-label">
+              CONTACT ME
+            </span>
+
+            <h2 class="contact-title">
+              Let’s <strong>Connect.</strong>
+            </h2>
+
+            <p class="contact-description">
+              Want to see more of my work or simply connect?
+              Find me through my social platforms.
+            </p>
+
+          </div>
+
+
+          <div class="contact-links reveal">
+
+
+            <a
+              class="contact-link"
+              href="https://www.instagram.com/sailaksh_drawin_official"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <strong>
+                Instagram
+              </strong>
+
+              <span>
+                @sailaksh_drawin_official →
+              </span>
+
+            </a>
+
+
+            <a
+              class="contact-link"
+              href="https://discord.gg/D8CcjGzmh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <strong>
+                Discord
+              </strong>
+
+              <span>
+                Join my community →
+              </span>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOCIAL
+    ====================================================== -->
+
+    <section class="social-section">
+
+      <div class="container">
+
+        <div class="social-header reveal">
+
+          <span class="section-label">
+            STAY CONNECTED
+          </span>
+
+          <h2>
+            Social <strong>Media.</strong>
+          </h2>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+          <a
+            class="social-card reveal"
+            href="https://pin.it/72b478MUD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="social-icon">
+              📌
+            </div>
+
+            <strong>
+              Pinterest
+            </strong>
+
+            <span>
+              Follow my inspiration
+            </span>
+
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://youtube.com/@sailaksh-drawin_official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="social-icon">
+              ▶
+            </div>
+
+            <strong>
+              YouTube
+            </strong>
+
+            <span>
+              Watch my videos
+            </span>
+
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://www.instagram.com/sailaksh_drawin_official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="social-icon">
+              ◎
+            </div>
+
+            <strong>
+              Instagram
+            </strong>
+
+            <span>
+              Follow my artwork
+            </span>
+
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://discord.gg/D8CcjGzmh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="social-icon">
+              💬
+            </div>
+
+            <strong>
+              Discord
+            </strong>
+
+            <span>
+              Join the community
+            </span>
+
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://whatsapp.com/channel/0029VakTbq0HQbRuymlz080T"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="social-icon">
+              ◉
+            </div>
+
+            <strong>
+              WhatsApp
+            </strong>
+
+            <span>
+              Stay connected
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+
+    <!-- =====================================================
+         DRAWING PAD — DRAW DIRECTLY ON THE WEBSITE
+    ====================================================== -->
+    <section id="drawing-pad">
+      <div class="container">
+        <div class="draw-heading reveal">
+          <span class="section-label">YOUR CREATIVE SPACE</span>
+          <h2 class="section-title">The <strong>Drawing Pad.</strong></h2>
+          <p>Sketch an idea, experiment with colours, and save your drawing as a PNG image.</p>
+        </div>
+        <div class="draw-workspace reveal">
+          <div class="draw-toolbar" aria-label="Drawing tools">
+            <div class="draw-tool-group">
+              <span class="draw-tool-label">COLOUR</span>
+              <input id="drawColor" type="color" value="#111111" aria-label="Brush colour">
+            </div>
+            <div class="draw-tool-group">
+              <span class="draw-tool-label">BRUSH SIZE</span>
+              <input id="drawSize" type="range" min="1" max="40" value="5" aria-label="Brush size">
+              <span id="drawSizeValue" class="draw-size-value">5 px</span>
+            </div>
+            <div class="draw-tool-group">
+              <button class="draw-btn active" id="drawBrush" type="button" aria-pressed="true">✎ Brush</button>
+              <button class="draw-btn" id="drawEraser" type="button" aria-pressed="false">⌫ Eraser</button>
+            </div>
+          </div>
+          <div class="draw-canvas-wrap">
+            <canvas id="silentDrawingCanvas" aria-label="Drawing canvas" role="img"></canvas>
+          </div>
+          <div class="draw-bottom">
+            <span class="draw-hint">Tip: draw with your mouse, stylus, or finger on a touchscreen.</span>
+            <div class="draw-actions">
+              <button class="draw-btn" id="drawClear" type="button">Clear canvas</button>
+              <button class="draw-btn primary" id="drawDownload" type="button">↓ Save drawing (PNG)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SUBSCRIBERS & FOLLOWERS
+         Edit the STATS values in the JavaScript near the bottom.
+    ====================================================== -->
+    <section id="community">
+      <div class="container">
+        <div class="community-heading reveal">
+          <span class="section-label">THE SILENT STROKES COMMUNITY</span>
+          <h2 class="section-title">Subscribers &amp; <strong>Followers</strong></h2>
+          <p>Every subscribe and follow keeps the pencils moving. Thank you for being part of the journey — here's where we are together.</p>
+          <div class="community-total">
+            <span class="community-total-number" id="communityTotalReach">0</span>
+            <span class="community-total-caption">TOTAL COMMUNITY</span>
+          </div>
+        </div>
+        <div class="community-grid">
+          <article class="community-card community-youtube reveal">
+            <div class="community-platform-top">
+              <div class="community-icon" aria-hidden="true">▶</div>
+              <div><div class="community-platform-name">YOUTUBE</div><div class="community-handle">@sailaksh-drawin_official</div></div>
+            </div>
+            <div class="community-stat-row">
+              <div><div class="community-stat-value" data-community-stat="youtubeSubscribers">0</div><div class="community-stat-label">SUBSCRIBERS</div></div>
+              <div><div class="community-stat-value" data-community-stat="youtubeViews">0</div><div class="community-stat-label">TOTAL VIEWS</div></div>
+            </div>
+            <div class="community-milestone">
+              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="youtube"></strong> subscribers</span><span data-community-percent="youtube"></span></div>
+              <div class="community-progress"><div class="community-progress-bar" data-community-progress="youtube"></div></div>
+            </div>
+            <a class="community-button" href="https://youtube.com/@sailaksh-drawin_official?sub_confirmation=1" target="_blank" rel="noopener noreferrer">SUBSCRIBE ON YOUTUBE →</a>
+          </article>
+          <article class="community-card community-instagram reveal">
+            <div class="community-platform-top">
+              <div class="community-icon" aria-hidden="true">◎</div>
+              <div><div class="community-platform-name">INSTAGRAM</div><div class="community-handle">@sailaksh_drawin_official</div></div>
+            </div>
+            <div class="community-stat-row">
+              <div><div class="community-stat-value" data-community-stat="instagramFollowers">0</div><div class="community-stat-label">FOLLOWERS</div></div>
+              <div><div class="community-stat-value" data-community-stat="instagramPosts">0</div><div class="community-stat-label">POSTS &amp; REELS</div></div>
+            </div>
+            <div class="community-milestone">
+              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="instagram"></strong> followers</span><span data-community-percent="instagram"></span></div>
+              <div class="community-progress"><div class="community-progress-bar" data-community-progress="instagram"></div></div>
+            </div>
+            <a class="community-button" href="https://www.instagram.com/sailaksh_drawin_official/" target="_blank" rel="noopener noreferrer">FOLLOW ON INSTAGRAM →</a>
+          </article>
+        </div>
+        <p style="text-align:center;color:#888;font-size:12px;margin-top:24px">Displayed counts are manually configured and may not match live platform totals.</p>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ====================================================== -->
+
+    <section class="quote-section">
+
+      <blockquote class="reveal">
+        “When words go silent,
+        my strokes tell the story.”
+      </blockquote>
+
+      <span>
+        — B SAILAKSHANTH
+      </span>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <a href="#home" class="footer-brand">
+
+        <img
+          class="footer-logo-image"
+          src="https://i.postimg.cc/W4cLzm9P/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg"
+          alt="Silent Strokes"
+        >
+
+        <span class="footer-logo">
+          SILENT STROKES
+        </span>
+
+      </a>
+
+
+      <div class="footer-text">
+
+        © <span id="year"></span>
+        Silent Strokes.
+        Created by B SAILAKSHANTH.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       LIGHTBOX
+  ====================================================== -->
+
+  <div class="lightbox" id="lightbox">
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt="Artwork preview"
+    >
+
+  </div>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+  ====================================================== -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+
+    /* =====================================================
+       SUBSCRIBERS & FOLLOWERS — MANUAL COUNTS
+       Update these values when your real counts change.
+    ===================================================== */
+    const COMMUNITY_STATS = {
+      youtubeSubscribers: 250,
+      youtubeViews: 120000,
+      youtubeGoal: 2000,
+      instagramFollowers: 350,
+      instagramPosts: 100,
+      instagramGoal: 2000
+    };
+    function communityFormatNumber(value) {
+      if (value >= 1000000) return (value / 1000000).toFixed(value >= 10000000 ? 0 : 1).replace(/\.0$/, '') + 'M';
+      if (value >= 100000) return value.toLocaleString('en-IN');
+      if (value >= 10000) return (value / 1000).toFixed(value >= 100000 ? 0 : 1).replace(/\.0$/, '') + 'K';
+      return value.toLocaleString();
+    }
+    function communityCountUp(element, target) {
+      const duration = 1300;
+      const start = performance.now();
+      function step(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        element.textContent = communityFormatNumber(Math.round(target * eased));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    document.querySelectorAll('[data-community-stat]').forEach(element => {
+      communityCountUp(element, COMMUNITY_STATS[element.dataset.communityStat] || 0);
+    });
+    communityCountUp(document.getElementById('communityTotalReach'), COMMUNITY_STATS.youtubeSubscribers + COMMUNITY_STATS.instagramFollowers);
+    [['youtube', COMMUNITY_STATS.youtubeSubscribers, COMMUNITY_STATS.youtubeGoal], ['instagram', COMMUNITY_STATS.instagramFollowers, COMMUNITY_STATS.instagramGoal]].forEach(([key, current, goal]) => {
+      const percent = goal > 0 ? Math.min(Math.round((current / goal) * 100), 100) : 0;
+      document.querySelector(`[data-community-goal="${key}"]`).textContent = communityFormatNumber(goal);
+      document.querySelector(`[data-community-percent="${key}"]`).textContent = percent + '%';
+      requestAnimationFrame(() => { document.querySelector(`[data-community-progress="${key}"]`).style.width = percent + '%'; });
+    });
+
+
+    /* =====================================================
+       LOADER
+    ===================================================== */
+
+    window.addEventListener("load", () => {
+
+      setTimeout(() => {
+
+        document
+          .getElementById("loader")
+          .classList.add("hide");
+
+      }, 500);
+
+    });
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener("click", () => {
+
+      navLinks.classList.toggle("open");
+
+      menuButton.textContent =
+        navLinks.classList.contains("open")
+          ? "×"
+          : "☰";
+
+    });
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          menuButton.textContent = "☰";
+
+        });
+
+      });
+
+
+    /* =====================================================
+       BLACK & WHITE MODE
+    ===================================================== */
+
+    const themeButton =
+      document.getElementById("themeButton");
+
+
+    themeButton.addEventListener("click", () => {
+
+      document.body.classList.toggle("bw");
+
+      const isBW =
+        document.body.classList.contains("bw");
+
+      themeButton.textContent =
+        isBW
+          ? "COLOUR MODE"
+          : "BLACK & WHITE";
+
+      localStorage.setItem(
+        "silentStrokesBW",
+        isBW
+      );
+
+    });
+
+
+    if (
+      localStorage.getItem("silentStrokesBW")
+      === "true"
+    ) {
+
+      document.body.classList.add("bw");
+
+      themeButton.textContent =
+        "COLOUR MODE";
+
+    }
+
+
+    /* =====================================================
+       GALLERY LIGHTBOX
+    ===================================================== */
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+
+    document
+      .querySelectorAll(".gallery-item")
+      .forEach(item => {
+
+        item.addEventListener("click", () => {
+
+          const image =
+            item.dataset.image;
+
+          lightboxImage.src = image;
+
+          lightbox.classList.add("active");
+
+          document.body.classList.add("no-scroll");
+
+        });
+
+      });
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+
+      document.body.classList.remove("no-scroll");
+
+      setTimeout(() => {
+
+        lightboxImage.src = "";
+
+      }, 300);
+
+    }
+
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      event => {
+
+        if (event.target === lightbox) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: .12
+        }
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    const backTop =
+      document.getElementById("backTop");
+
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+      } else {
+
+        backTop.classList.remove("show");
+
+      }
+
+    });
+
+
+    backTop.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    document.getElementById("year")
+      .textContent = new Date().getFullYear();
+
+
+    /* =====================================================
+       ACTIVE NAVIGATION
+    ===================================================== */
+
+    const sections =
+      document.querySelectorAll("section[id]");
+
+    const navItems =
+      document.querySelectorAll(
+        ".nav-links a"
+      );
+
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach(section => {
+
+        const sectionTop =
+          section.offsetTop - 150;
+
+        if (
+          window.scrollY >= sectionTop
+        ) {
+
+          current =
+            section.getAttribute("id");
+
+        }
+
+      });
+
+
+      navItems.forEach(item => {
+
+        item.style.color = "";
+
+        if (
+          item.getAttribute("href")
+          === "#" + current
+        ) {
+
+          item.style.color = "#111";
+
+        }
+
+      });
+
+    });
+
+
+
+    /* =====================================================
+       DRAWING PAD INTERACTIONS
+    ====================================================== */
+    (() => {
+      const canvas = document.getElementById('silentDrawingCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const color = document.getElementById('drawColor');
+      const size = document.getElementById('drawSize');
+      const sizeValue = document.getElementById('drawSizeValue');
+      const brush = document.getElementById('drawBrush');
+      const eraser = document.getElementById('drawEraser');
+      let drawing = false;
+      let useEraser = false;
+      let lastX = 0, lastY = 0;
+      let strokes = [];
+      let currentStroke = null;
+      const dpr = () => Math.max(1, window.devicePixelRatio || 1);
+
+      function setupCanvas() {
+        const old = document.createElement('canvas');
+        old.width = canvas.width; old.height = canvas.height;
+        old.getContext('2d').drawImage(canvas, 0, 0);
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = Math.round(rect.width * dpr());
+        canvas.height = Math.round(rect.height * dpr());
+        ctx.setTransform(dpr(), 0, 0, dpr(), 0, 0);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, rect.width, rect.height);
+        if (old.width && old.height) ctx.drawImage(old, 0, 0, old.width, old.height, 0, 0, rect.width, rect.height);
+        ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      }
+      function point(event) {
+        const rect = canvas.getBoundingClientRect();
+        return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+      }
+      function setTool(eraserOn) {
+        useEraser = eraserOn;
+        brush.classList.toggle('active', !eraserOn);
+        eraser.classList.toggle('active', eraserOn);
+        brush.setAttribute('aria-pressed', String(!eraserOn));
+        eraser.setAttribute('aria-pressed', String(eraserOn));
+        canvas.style.cursor = eraserOn ? 'cell' : 'crosshair';
+      }
+      function begin(event) {
+        if (event.button !== undefined && event.button !== 0) return;
+        event.preventDefault(); canvas.setPointerCapture?.(event.pointerId);
+        drawing = true;
+        const p = point(event); lastX = p.x; lastY = p.y;
+        currentStroke = { color: useEraser ? '#ffffff' : color.value, size: Number(size.value), points: [p] };
+        strokes.push(currentStroke);
+        ctx.beginPath(); ctx.arc(p.x, p.y, Number(size.value) / 2, 0, Math.PI * 2);
+        ctx.fillStyle = currentStroke.color; ctx.fill();
+      }
+      function move(event) {
+        if (!drawing) return;
+        event.preventDefault(); const p = point(event);
+        ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(p.x, p.y);
+        ctx.strokeStyle = useEraser ? '#ffffff' : color.value;
+        ctx.lineWidth = Number(size.value); ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke();
+        if (currentStroke) currentStroke.points.push(p);
+        lastX = p.x; lastY = p.y;
+      }
+      function end() { drawing = false; currentStroke = null; }
+      canvas.addEventListener('pointerdown', begin);
+      canvas.addEventListener('pointermove', move);
+      canvas.addEventListener('pointerup', end);
+      canvas.addEventListener('pointercancel', end);
+      canvas.addEventListener('lostpointercapture', end);
+      size.addEventListener('input', () => { sizeValue.textContent = size.value + ' px'; });
+      brush.addEventListener('click', () => setTool(false));
+      eraser.addEventListener('click', () => setTool(true));
+      document.getElementById('drawClear').addEventListener('click', () => {
+        if (!window.confirm('Clear your whole drawing?')) return;
+        const rect = canvas.getBoundingClientRect();
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, rect.width, rect.height); strokes = [];
+      });
+      document.getElementById('drawDownload').addEventListener('click', () => {
+        const exportCanvas = document.createElement('canvas');
+        exportCanvas.width = canvas.width; exportCanvas.height = canvas.height;
+        const exportCtx = exportCanvas.getContext('2d');
+        exportCtx.fillStyle = '#ffffff'; exportCtx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+        exportCtx.drawImage(canvas, 0, 0);
+        const link = document.createElement('a'); link.download = 'silent-strokes-drawing.png';
+        link.href = exportCanvas.toDataURL('image/png'); link.click();
+      });
+      setupCanvas();
+      window.addEventListener('resize', setupCanvas);
+    })();
+
+  </script>
+
+</body>
+</html>
