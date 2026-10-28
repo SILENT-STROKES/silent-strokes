@@ -1767,9 +1767,9 @@
         <a href="#gallery">Gallery</a>
         <a href="#videos">Videos</a>
         <a href="#blog">Blog</a> 
-        <a href="#contact">Contact</a>
         <a href="#drawing-pad">Drawing Pad</a>
         <a href="#community">Subscribers</a>
+        <a href="#contact">Contact</a>
         <a href="form.html">Community Form</a>
         
         <button
@@ -2561,6 +2561,99 @@
 
 
     <!-- =====================================================
+         DRAWING PAD — DRAW DIRECTLY ON THE WEBSITE
+    ====================================================== -->
+    <section id="drawing-pad">
+      <div class="container">
+        <div class="draw-heading reveal">
+          <span class="section-label">YOUR CREATIVE SPACE</span>
+          <h2 class="section-title">The <strong>Drawing Pad.</strong></h2>
+          <p>Sketch an idea, experiment with colours, and save your drawing as a PNG image.</p>
+        </div>
+        <div class="draw-workspace reveal">
+          <div class="draw-toolbar" aria-label="Drawing tools">
+            <div class="draw-tool-group">
+              <span class="draw-tool-label">COLOUR</span>
+              <input id="drawColor" type="color" value="#111111" aria-label="Brush colour">
+            </div>
+            <div class="draw-tool-group">
+              <span class="draw-tool-label">BRUSH SIZE</span>
+              <input id="drawSize" type="range" min="1" max="40" value="5" aria-label="Brush size">
+              <span id="drawSizeValue" class="draw-size-value">5 px</span>
+            </div>
+            <div class="draw-tool-group">
+              <button class="draw-btn active" id="drawBrush" type="button" aria-pressed="true">✎ Brush</button>
+              <button class="draw-btn" id="drawEraser" type="button" aria-pressed="false">⌫ Eraser</button>
+            </div>
+          </div>
+          <div class="draw-canvas-wrap">
+            <canvas id="silentDrawingCanvas" aria-label="Drawing canvas" role="img"></canvas>
+          </div>
+          <div class="draw-bottom">
+            <span class="draw-hint">Tip: draw with your mouse, stylus, or finger on a touchscreen.</span>
+            <div class="draw-actions">
+              <button class="draw-btn" id="drawClear" type="button">Clear canvas</button>
+              <button class="draw-btn primary" id="drawDownload" type="button">↓ Save drawing (PNG)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SUBSCRIBERS & FOLLOWERS
+         Edit the STATS values in the JavaScript near the bottom.
+    ====================================================== -->
+    <section id="community">
+      <div class="container">
+        <div class="community-heading reveal">
+          <span class="section-label">THE SILENT STROKES COMMUNITY</span>
+          <h2 class="section-title">Subscribers &amp; <strong>Followers</strong></h2>
+          <p>Every subscribe and follow keeps the pencils moving. Thank you for being part of the journey — here's where we are together.</p>
+          <div class="community-total">
+            <span class="community-total-number" id="communityTotalReach">0</span>
+            <span class="community-total-caption">TOTAL COMMUNITY</span>
+          </div>
+        </div>
+        <div class="community-grid">
+          <article class="community-card community-youtube reveal">
+            <div class="community-platform-top">
+              <div class="community-icon" aria-hidden="true">▶</div>
+              <div><div class="community-platform-name">YOUTUBE</div><div class="community-handle">@sailaksh_drawin_7_official</div></div>
+            </div>
+            <div class="community-stat-row">
+              <div><div class="community-stat-value" data-community-stat="youtubeSubscribers">0</div><div class="community-stat-label">SUBSCRIBERS</div></div>
+              <div><div class="community-stat-value" data-community-stat="youtubeViews">0</div><div class="community-stat-label">TOTAL VIEWS</div></div>
+            </div>
+            <div class="community-milestone">
+              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="youtube"></strong> subscribers</span><span data-community-percent="youtube"></span></div>
+              <div class="community-progress"><div class="community-progress-bar" data-community-progress="youtube"></div></div>
+            </div>
+            <a class="community-button" href="https://youtube.com/@sailaksh_drawin_7_official?si=NImZdxwD8kOdMG9W" target="_blank" rel="noopener noreferrer">SUBSCRIBE ON YOUTUBE →</a>
+          </article>
+          <article class="community-card community-instagram reveal">
+            <div class="community-platform-top">
+              <div class="community-icon" aria-hidden="true">◎</div>
+              <div><div class="community-platform-name">INSTAGRAM</div><div class="community-handle">@sailaksh_drawin_official</div></div>
+            </div>
+            <div class="community-stat-row">
+              <div><div class="community-stat-value" data-community-stat="instagramFollowers">0</div><div class="community-stat-label">FOLLOWERS</div></div>
+              <div><div class="community-stat-value" data-community-stat="instagramPosts">0</div><div class="community-stat-label">POSTS &amp; REELS</div></div>
+            </div>
+            <div class="community-milestone">
+              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="instagram"></strong> followers</span><span data-community-percent="instagram"></span></div>
+              <div class="community-progress"><div class="community-progress-bar" data-community-progress="instagram"></div></div>
+            </div>
+            <a class="community-button" href="https://www.instagram.com/sailaksh_drawin_official/" target="_blank" rel="noopener noreferrer">FOLLOW ON INSTAGRAM →</a>
+          </article>
+        </div>
+        <p style="text-align:center;color:#888;font-size:12px;margin-top:24px">Displayed counts are manually configured and may not match live platform totals.</p>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
          CONTACT
     ====================================================== -->
 
@@ -2779,98 +2872,6 @@
 
 
 
-
-
-    <!-- =====================================================
-         DRAWING PAD — DRAW DIRECTLY ON THE WEBSITE
-    ====================================================== -->
-    <section id="drawing-pad">
-      <div class="container">
-        <div class="draw-heading reveal">
-          <span class="section-label">YOUR CREATIVE SPACE</span>
-          <h2 class="section-title">The <strong>Drawing Pad.</strong></h2>
-          <p>Sketch an idea, experiment with colours, and save your drawing as a PNG image.</p>
-        </div>
-        <div class="draw-workspace reveal">
-          <div class="draw-toolbar" aria-label="Drawing tools">
-            <div class="draw-tool-group">
-              <span class="draw-tool-label">COLOUR</span>
-              <input id="drawColor" type="color" value="#111111" aria-label="Brush colour">
-            </div>
-            <div class="draw-tool-group">
-              <span class="draw-tool-label">BRUSH SIZE</span>
-              <input id="drawSize" type="range" min="1" max="40" value="5" aria-label="Brush size">
-              <span id="drawSizeValue" class="draw-size-value">5 px</span>
-            </div>
-            <div class="draw-tool-group">
-              <button class="draw-btn active" id="drawBrush" type="button" aria-pressed="true">✎ Brush</button>
-              <button class="draw-btn" id="drawEraser" type="button" aria-pressed="false">⌫ Eraser</button>
-            </div>
-          </div>
-          <div class="draw-canvas-wrap">
-            <canvas id="silentDrawingCanvas" aria-label="Drawing canvas" role="img"></canvas>
-          </div>
-          <div class="draw-bottom">
-            <span class="draw-hint">Tip: draw with your mouse, stylus, or finger on a touchscreen.</span>
-            <div class="draw-actions">
-              <button class="draw-btn" id="drawClear" type="button">Clear canvas</button>
-              <button class="draw-btn primary" id="drawDownload" type="button">↓ Save drawing (PNG)</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         SUBSCRIBERS & FOLLOWERS
-         Edit the STATS values in the JavaScript near the bottom.
-    ====================================================== -->
-    <section id="community">
-      <div class="container">
-        <div class="community-heading reveal">
-          <span class="section-label">THE SILENT STROKES COMMUNITY</span>
-          <h2 class="section-title">Subscribers &amp; <strong>Followers</strong></h2>
-          <p>Every subscribe and follow keeps the pencils moving. Thank you for being part of the journey — here's where we are together.</p>
-          <div class="community-total">
-            <span class="community-total-number" id="communityTotalReach">0</span>
-            <span class="community-total-caption">TOTAL COMMUNITY</span>
-          </div>
-        </div>
-        <div class="community-grid">
-          <article class="community-card community-youtube reveal">
-            <div class="community-platform-top">
-              <div class="community-icon" aria-hidden="true">▶</div>
-              <div><div class="community-platform-name">YOUTUBE</div><div class="community-handle">@sailaksh_drawin_7_official</div></div>
-            </div>
-            <div class="community-stat-row">
-              <div><div class="community-stat-value" data-community-stat="youtubeSubscribers">0</div><div class="community-stat-label">SUBSCRIBERS</div></div>
-              <div><div class="community-stat-value" data-community-stat="youtubeViews">0</div><div class="community-stat-label">TOTAL VIEWS</div></div>
-            </div>
-            <div class="community-milestone">
-              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="youtube"></strong> subscribers</span><span data-community-percent="youtube"></span></div>
-              <div class="community-progress"><div class="community-progress-bar" data-community-progress="youtube"></div></div>
-            </div>
-            <a class="community-button" href="https://youtube.com/@sailaksh_drawin_7_official?si=NImZdxwD8kOdMG9W" target="_blank" rel="noopener noreferrer">SUBSCRIBE ON YOUTUBE →</a>
-          </article>
-          <article class="community-card community-instagram reveal">
-            <div class="community-platform-top">
-              <div class="community-icon" aria-hidden="true">◎</div>
-              <div><div class="community-platform-name">INSTAGRAM</div><div class="community-handle">@sailaksh_drawin_official</div></div>
-            </div>
-            <div class="community-stat-row">
-              <div><div class="community-stat-value" data-community-stat="instagramFollowers">0</div><div class="community-stat-label">FOLLOWERS</div></div>
-              <div><div class="community-stat-value" data-community-stat="instagramPosts">0</div><div class="community-stat-label">POSTS &amp; REELS</div></div>
-            </div>
-            <div class="community-milestone">
-              <div class="community-milestone-text"><span>Next goal: <strong data-community-goal="instagram"></strong> followers</span><span data-community-percent="instagram"></span></div>
-              <div class="community-progress"><div class="community-progress-bar" data-community-progress="instagram"></div></div>
-            </div>
-            <a class="community-button" href="https://www.instagram.com/sailaksh_drawin_official/" target="_blank" rel="noopener noreferrer">FOLLOW ON INSTAGRAM →</a>
-          </article>
-        </div>
-        <p style="text-align:center;color:#888;font-size:12px;margin-top:24px">Displayed counts are manually configured and may not match live platform totals.</p>
-      </div>
-    </section>
 
 
     <!-- =====================================================
