@@ -1,41 +1,1049 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111111"><meta name="robots" content="noindex,nofollow"><title>Creator Studio — Silent Strokes</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"><script src="./supabase-config.js"></script><style>
-:root{--green:#111111;--green2:#252525;--cream:#ffffff;--gold:#b00000;--ink:#111111;--muted:#777777;--line:#e5e5e5;--paper:#ffffff;--accent:#b00000}*{box-sizing:border-box}body{margin:0;background:#f7f6f0;color:var(--ink);font:14px 'Inter',sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:11px 14px;background:var(--green);color:var(--cream);font-weight:600}button.secondary{background:transparent;color:var(--green);border:1px solid var(--line)}button.danger{background:#8c3434}button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1240px,calc(100% - 32px));margin:auto}.top{height:70px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:12px;letter-spacing:1.4px;font-weight:700;color:var(--green);text-decoration:none}.brand b{color:var(--gold)}.topright{display:flex;gap:10px;align-items:center}.muted{color:var(--muted);font-size:12px}.shell{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;padding:26px 0 50px}.side{background:var(--green);color:var(--cream);border-radius:16px;padding:22px 14px;align-self:start;position:sticky;top:16px}.side .eyebrow{font-size:9px;letter-spacing:2px;color:#e00000;padding:0 10px}.side h2{font:400 25px 'Playfair Display',serif;padding:0 10px;margin:10px 0 22px}.nav{display:grid;gap:5px}.nav button{background:transparent;color:#eeeeee;text-align:left;font-weight:500;padding:12px 10px}.nav button.active,.nav button:hover{background:#ffffff15;color:white}.private{border-top:1px solid #ffffff24;margin:22px 10px 0;padding-top:14px;font-size:10px;line-height:1.7;color:#cccccc}.main{min-width:0}.heading{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin:0 0 22px}.eyebrow{font-size:10px;letter-spacing:1.8px;color:var(--gold);font-weight:700}.heading h1{font:400 clamp(30px,4vw,42px)/1.1 'Playfair Display',serif;margin:8px 0}.heading p{margin:0;color:var(--muted);line-height:1.7;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}.statlabel{font-size:10px;color:var(--muted);letter-spacing:.5px}.stat{font:400 32px 'Playfair Display',serif;margin:10px 0 4px;color:var(--green)}.statfoot{font-size:10px;color:var(--muted)}.twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:14px}.panel h3{font:400 22px 'Playfair Display',serif;margin:0 0 8px}.panel p{color:var(--muted);font-size:12px;line-height:1.7}.field{width:100%;border:1px solid var(--line);border-radius:9px;background:white;padding:11px 12px;outline-color:var(--accent);margin:6px 0 12px}.field:focus{border-color:var(--accent)}textarea.field{min-height:120px;resize:vertical}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row .field{flex:1;min-width:140px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.formgrid .full{grid-column:1/-1}.list{display:grid;gap:9px;margin-top:14px}.item{border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.item strong{display:block;font-size:12px}.item small{display:block;color:var(--muted);font-size:10px;margin-top:5px;line-height:1.5}.item button{padding:7px 9px;font-size:10px}.hidden{display:none!important}.notice{border:1px dashed #d4c9ac;border-radius:10px;padding:12px;color:#6f6040;font-size:11px;line-height:1.7;margin:12px 0}.status{font-size:11px;color:var(--muted);min-height:16px;margin:8px 0}.authwrap{min-height:calc(100vh - 70px);display:grid;place-items:center;padding:30px 0}.auth{width:min(460px,100%);background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,42px);box-shadow:0 15px 60px #13281a0a}.auth h1{font:400 36px 'Playfair Display',serif;margin:10px 0}.auth p{font-size:12px;color:var(--muted);line-height:1.8}.auth label,.formlabel{font-size:11px;color:#4b554c;font-weight:600}.tag{display:inline-block;background:#edf1e8;color:#37533d;padding:5px 8px;border-radius:99px;font-size:9px}.preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.preview img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:9px;background:#f0efe8}.themegrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.swatch{height:76px;border-radius:10px;margin-bottom:10px;border:1px solid #0001}.foot{padding:20px 0 30px;border-top:1px solid var(--line);font-size:9px;letter-spacing:1px;color:var(--muted);display:flex;justify-content:space-between}@media(max-width:900px){.shell{grid-template-columns:1fr}.side{position:static}.side h2{margin-bottom:12px}.nav{grid-template-columns:repeat(3,minmax(0,1fr))}.nav button{text-align:center;font-size:11px}.private{display:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.wrap{width:calc(100% - 22px)}.twocol{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.themegrid{grid-template-columns:1fr 1fr}.heading{align-items:flex-start;flex-direction:column}.top{height:60px}}
-</style></head><body><header class="wrap top"><a class="brand" href="./index.html"><b>S.</b> SILENT STROKES <span class="muted">/ PRIVATE STUDIO</span></a><div class="topright"><a class="muted" href="./index.html">← Website</a><button id="signOut" class="secondary hidden">Sign out</button></div></header>
-<section id="authView" class="wrap authwrap"><div class="auth"><div class="eyebrow">OWNER ACCESS · PRIVATE WORKSPACE</div><h1>Your creative world,<br><i>in one place.</i></h1><p>Sign in with the owner account created in your Supabase project. There is no public sign-up form. Access is also restricted by a database-side owner allowlist.</p><form id="loginForm"><label for="email">Owner email</label><input id="email" class="field" type="email" autocomplete="username" required placeholder="you@example.com"><label for="password">Password</label><input id="password" class="field" type="password" autocomplete="current-password" required placeholder="Your password"><button style="width:100%" type="submit">Sign in securely ↗</button></form><p id="authStatus" class="status" role="status">Configure Supabase first to enable sign-in.</p><div class="notice">Security note: this page is not a password gate by itself. Supabase Auth, database row-level security, the owner allowlist and a private storage bucket protect your data.</div></div></section>
-<div id="appView" class="wrap shell hidden"><aside class="side"><div class="eyebrow">SILENT STROKES</div><h2>Creator<br><i>Studio.</i></h2><nav class="nav" id="nav"><button class="active" data-page="dashboard">◈ Dashboard</button><button data-page="artwork">▧ Artwork</button><button data-page="shorts">▷ Shorts</button><button data-page="notes">✎ Notes</button><button data-page="analytics">⌁ Analytics</button><button data-page="themes">◐ Themes</button><button data-page="ai">✦ AI Companion</button></nav><div class="private">PRIVATE OWNER AREA<br><span id="ownerLabel">Signed in</span><br>Data is owner-scoped.</div></aside><main class="main">
-<section class="page" id="page-dashboard"><div class="heading"><div><div class="eyebrow">YOUR CREATIVE COMMAND CENTER</div><h1>Good to see you.</h1><p>Your ideas, artwork and progress — kept together and private.</p></div><span class="tag">● Owner session active</span></div><div class="cards"><div class="card"><div class="statlabel">ARTWORK SAVED</div><div class="stat" id="statArt">0</div><div class="statfoot">Private studio library</div></div><div class="card"><div class="statlabel">SHORTS PLANNED</div><div class="stat" id="statShorts">0</div><div class="statfoot">Ideas ready to develop</div></div><div class="card"><div class="statlabel">STUDIO NOTES</div><div class="stat" id="statNotes">0</div><div class="statfoot">Thoughts captured</div></div><div class="card"><div class="statlabel">TOTAL VIEWS TRACKED</div><div class="stat" id="statViews">0</div><div class="statfoot">Manual entries you record</div></div></div><div class="twocol"><div class="panel"><h3>Recent studio activity</h3><p>Recently saved artwork, Shorts and notes.</p><div id="recentList" class="list"><div class="muted">Loading your workspace…</div></div></div><div class="panel"><h3>Make a little progress</h3><p>Quick links for your next creative step.</p><div class="list"><button data-goto="artwork">＋ Save a new artwork</button><button class="secondary" data-goto="shorts">＋ Plan a YouTube Short</button><button class="secondary" data-goto="notes">＋ Capture an idea</button><button class="secondary" data-goto="analytics">＋ Record channel analytics</button></div><div class="notice">Analytics are entered manually here. YouTube live analytics require a separately configured YouTube API/OAuth integration.</div></div></div></section>
-<section class="page hidden" id="page-artwork"><div class="heading"><div><div class="eyebrow">YOUR PRIVATE LIBRARY</div><h1>Artwork.</h1><p>Upload finished pieces or works in progress. Files are stored in a private bucket.</p></div></div><div class="twocol"><div class="panel"><h3>Add artwork</h3><form id="artForm"><label class="formlabel">Title</label><input class="field" id="artTitle" maxlength="90" required placeholder="e.g. Moonlit swordsman"><label class="formlabel">Description / notes</label><textarea class="field" id="artDescription" maxlength="1000" placeholder="Medium, concept, what to improve…"></textarea><label class="formlabel">Image file (PNG, JPG, WEBP; max 8 MB)</label><input class="field" id="artFile" type="file" accept="image/png,image/jpeg,image/webp" required><button type="submit">Upload to private library</button><p id="artStatus" class="status"></p></form></div><div class="panel"><h3>Saved pieces</h3><p>Only the signed-in owner can list or retrieve these files.</p><div id="artList" class="preview"><div class="muted">No artwork loaded.</div></div></div></div></section>
-<section class="page hidden" id="page-shorts"><div class="heading"><div><div class="eyebrow">VIDEO IDEAS & PRODUCTION</div><h1>Shorts Lab.</h1><p>Plan the hook, sequence and caption before you edit.</p></div></div><div class="twocol"><div class="panel"><h3>Create a Shorts plan</h3><form id="shortForm"><label class="formlabel">Topic / artwork</label><input class="field" id="shortTopic" required maxlength="160" placeholder="e.g. Anime eye drawing transformation"><div class="formgrid"><div><label class="formlabel">Duration</label><select class="field" id="shortLength"><option value="15">15 seconds</option><option value="30" selected>30 seconds</option><option value="45">45 seconds</option><option value="60">60 seconds</option></select></div><div><label class="formlabel">Mood</label><select class="field" id="shortMood"><option>Epic</option><option>Satisfying</option><option>Mysterious</option><option>Inspirational</option><option>Funny</option></select></div></div><button type="submit">Generate plan & save</button><p id="shortStatus" class="status"></p></form></div><div class="panel"><h3>Your saved plans</h3><div id="shortList" class="list"><div class="muted">No plans yet.</div></div></div></div></section>
-<section class="page hidden" id="page-notes"><div class="heading"><div><div class="eyebrow">PRIVATE THINKING SPACE</div><h1>Studio notes.</h1><p>Save ideas, reminders, scripts and concepts. Each note is private to your owner account.</p></div></div><div class="twocol"><div class="panel"><h3>Capture a note</h3><form id="noteForm"><label class="formlabel">Title</label><input class="field" id="noteTitle" maxlength="160" required placeholder="A thought worth keeping"><label class="formlabel">Note</label><textarea class="field" id="noteBody" maxlength="10000" required placeholder="Write freely…"></textarea><button type="submit">Save private note</button><p id="noteStatus" class="status"></p></form></div><div class="panel"><h3>Notes library</h3><div id="noteList" class="list"><div class="muted">No notes yet.</div></div></div></div></section>
-<section class="page hidden" id="page-analytics"><div class="heading"><div><div class="eyebrow">YOUR CREATOR METRICS</div><h1>Analytics.</h1><p>Track the numbers you choose to record. This is not a live YouTube connection.</p></div></div><div class="twocol"><div class="panel"><h3>Record a snapshot</h3><form id="metricForm"><label class="formlabel">Video / channel label</label><input class="field" id="metricLabel" maxlength="160" required placeholder="e.g. Anime eye reveal #12"><div class="formgrid"><div><label class="formlabel">Views</label><input class="field" id="metricViews" type="number" min="0" step="1" required value="0"></div><div><label class="formlabel">Likes</label><input class="field" id="metricLikes" type="number" min="0" step="1" required value="0"></div><div><label class="formlabel">Subscribers gained</label><input class="field" id="metricSubs" type="number" min="0" step="1" required value="0"></div><div><label class="formlabel">Date</label><input class="field" id="metricDate" type="date" required></div></div><button type="submit">Save analytics snapshot</button><p id="metricStatus" class="status"></p></form></div><div class="panel"><h3>Recorded snapshots</h3><div id="metricList" class="list"><div class="muted">No analytics yet.</div></div></div></div></section>
-<section class="page hidden" id="page-ai"><div class="heading"><div><div class="eyebrow">YOUR PRIVATE CREATIVE PARTNER</div><h1>AI Companion.</h1><p>Get practical help with art concepts, anime-inspired original characters, drawing practice, palettes, titles, captions and Shorts scripts.</p></div><span class="tag">Owner-only · 20 messages/hour</span></div><div class="twocol"><div class="panel"><h3>Ask Silent Strokes AI</h3><p>Your message is sent to a secured Supabase Edge Function. The OpenAI key stays server-side and is never exposed in this page.</p><form id="aiForm"><label class="formlabel" for="aiPrompt">What are you creating?</label><textarea class="field" id="aiPrompt" maxlength="1500" required placeholder="Help me plan a 30-second anime eye drawing Short with a strong hook…"></textarea><div class="row"><button id="aiSend" type="submit">Ask AI Companion</button><button class="secondary" type="button" data-ai-prompt="Give me 5 original anime art Shorts ideas with hooks and final reveals.">Shorts ideas</button><button class="secondary" type="button" data-ai-prompt="Create a 20-minute daily drawing practice plan for improving anime faces.">Drawing practice</button></div><p id="aiStatus" class="status" role="status" aria-live="polite"></p></form></div><div class="panel"><h3>Response</h3><div id="aiReply" style="white-space:pre-wrap;line-height:1.8;font-size:13px;min-height:160px">Your AI response will appear here.</div><p class="muted">Responses are generated by OpenAI through your configured API account. API usage may incur separate charges.</p></div></div></section><section class="page hidden" id="page-themes"><div class="heading"><div><div class="eyebrow">MAKE THE SPACE YOURS</div><h1>Themes.</h1><p>Choose a studio palette. Your selection is saved to your private account.</p></div></div><div class="themegrid"><div class="panel"><div class="swatch" style="background:linear-gradient(120deg,#0e2119 50%,#b08b45 50%)"></div><h3>Forest & Gold</h3><p>Signature Silent Strokes palette.</p><button data-theme="forest">Apply theme</button></div><div class="panel"><div class="swatch" style="background:linear-gradient(120deg,#20243a 50%,#b5a7ff 50%)"></div><h3>Midnight Violet</h3><p>Deep, focused and expressive.</p><button data-theme="violet">Apply theme</button></div><div class="panel"><div class="swatch" style="background:linear-gradient(120deg,#f5f0e6 50%,#c47b5a 50%)"></div><h3>Warm Atelier</h3><p>Soft paper and terracotta.</p><button data-theme="atelier">Apply theme</button></div></div><p id="themeStatus" class="status"></p></section>
-</main></div><footer class="wrap foot"><span>WHERE EVERY STROKE TELLS A STORY.</span><span>PRIVATE CREATOR STUDIO · © SILENT STROKES</span></footer>
-<script type="module">
-import {createClient} from 'https://esm.sh/@supabase/supabase-js@2';
-const cfg=window.SS_CONFIG||{},$=id=>document.getElementById(id);let db=null,user=null,records=[];const configured=/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(cfg.supabaseUrl||'')&&!!cfg.supabaseAnonKey&&!String(cfg.supabaseAnonKey).includes('YOUR_');
-const setStatus=(id,msg)=>$(id).textContent=msg;const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=n=>Number(n||0).toLocaleString();
-function page(name){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hidden',x.id!=='page-'+name));document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===name));}
-document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>page(b.dataset.page));document.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>page(b.dataset.goto));
-function showApp(){ $('authView').classList.add('hidden');$('appView').classList.remove('hidden');$('signOut').classList.remove('hidden');$('ownerLabel').textContent=user.email||'Owner';page('dashboard');loadAll();}
-function showAuth(){ $('authView').classList.remove('hidden');$('appView').classList.add('hidden');$('signOut').classList.add('hidden');}
-async function ensureOwner(){const {data,error}=await db.from('creator_studio_owners').select('user_id').eq('user_id',user.id).maybeSingle();if(error||!data){await db.auth.signOut();user=null;showAuth();setStatus('authStatus','This account is not on the Creator Studio owner allowlist. Ask your project owner to authorize the account in Supabase SQL.');return false;}return true;}
-async function boot(){if(!configured){setStatus('authStatus','Not connected yet. Replace the placeholders in supabase-config.js, then run the SQL migration in SETUP.md.');return;}db=createClient(cfg.supabaseUrl,cfg.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const {data:{session}}=await db.auth.getSession();if(session?.user){user=session.user;if(await ensureOwner())showApp();}db.auth.onAuthStateChange(async(_event,session)=>{if(session?.user){user=session.user;if(await ensureOwner())showApp();}else{user=null;showAuth();}});}
-$('loginForm').onsubmit=async e=>{e.preventDefault();if(!db){setStatus('authStatus','Configure Supabase first.');return;}setStatus('authStatus','Signing in…');const {error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});setStatus('authStatus',error?error.message:'Signed in. Checking owner access…');};$('signOut').onclick=async()=>{if(db)await db.auth.signOut();};
-async function getRecords(type){const {data,error}=await db.from('creator_studio_records').select('*').eq('user_id',user.id).eq('record_type',type).order('created_at',{ascending:false});if(error)throw error;return data||[];}
-async function addRecord(type,title,body,metadata={}){const {error}=await db.from('creator_studio_records').insert({user_id:user.id,record_type:type,title,body,metadata});if(error)throw error;}
-async function removeRecord(id){if(!confirm('Delete this item permanently?'))return;const target=records.find(r=>r.id===id);if(target?.record_type==='artwork'&&target.metadata?.storage_path){const {error:storageError}=await db.storage.from('creator-studio-private').remove([target.metadata.storage_path]);if(storageError){alert('Could not delete the image file: '+storageError.message);return;}}const {error}=await db.from('creator_studio_records').delete().eq('id',id).eq('user_id',user.id);if(error)alert(error.message);else await loadAll();}
-async function renderArtworks(arr){const root=$('artList');root.replaceChildren();if(!arr.length){root.innerHTML='<div class="muted">No artwork saved yet.</div>';return;}for(const r of arr){const card=document.createElement('div');card.style.cssText='border:1px solid var(--line);border-radius:10px;padding:9px;min-width:0';const {data}=await db.storage.from('creator-studio-private').createSignedUrl(r.metadata?.storage_path||'',300);if(data?.signedUrl){const img=document.createElement('img');img.src=data.signedUrl;img.alt=r.title;img.loading='lazy';img.style.cssText='width:100%;aspect-ratio:1;object-fit:cover;border-radius:7px;background:#f0efe8';card.append(img);}const title=document.createElement('strong');title.textContent=r.title;title.style.cssText='display:block;font-size:11px;margin:8px 0';const del=document.createElement('button');del.className='secondary';del.textContent='Delete';del.style.cssText='padding:7px 9px;font-size:10px';del.onclick=()=>removeRecord(r.id);card.append(title,del);root.append(card);}}
-function renderList(id,arr,kind){const root=$(id);root.replaceChildren();if(!arr.length){root.innerHTML='<div class="muted">Nothing saved yet.</div>';return;}arr.forEach(r=>{const el=document.createElement('div');el.className='item';const meta=r.metadata||{};let summary=(r.body||'').slice(0,140);if(kind==='metric')summary=`${fmt(meta.views)} views · ${fmt(meta.likes)} likes · +${fmt(meta.subscribers)} subs · ${meta.date||''}`;if(kind==='art')summary=r.body||'Private artwork';if(kind==='short')summary=(r.body||'').slice(0,150);el.innerHTML=`<div><strong>${esc(r.title)}</strong><small>${esc(summary)}</small><small>${new Date(r.created_at).toLocaleDateString()}</small></div><button class="secondary" data-delete="${r.id}" aria-label="Delete ${esc(r.title)}">Delete</button>`;root.append(el);el.querySelector('button').onclick=()=>removeRecord(r.id);});}
-async function loadAll(){try{const [arts,shorts,notes,metrics,themes]=await Promise.all([getRecords('artwork'),getRecords('short'),getRecords('note'),getRecords('metric'),getRecords('theme')]);records=[...arts,...shorts,...notes,...metrics,...themes];$('statArt').textContent=arts.length;$('statShorts').textContent=shorts.length;$('statNotes').textContent=notes.length;$('statViews').textContent=fmt(metrics.reduce((n,r)=>n+Number(r.metadata?.views||0),0));await renderArtworks(arts);renderList('shortList',shorts,'short');renderList('noteList',notes,'note');renderList('metricList',metrics,'metric');renderList('recentList',[...records].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at)).slice(0,6),'recent');const t=themes[0]?.metadata?.theme;if(t)applyTheme(t,false);}catch(e){console.error(e);setStatus('authStatus','Unable to load records. Confirm the Creator Studio SQL migration was applied.');}}
-$('artForm').onsubmit=async e=>{e.preventDefault();const file=$('artFile').files[0];if(!file)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>8*1024*1024){setStatus('artStatus','Choose a PNG, JPG or WEBP image under 8 MB.');return;}setStatus('artStatus','Uploading private artwork…');const path=`${user.id}/${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;try{const {error:upErr}=await db.storage.from('creator-studio-private').upload(path,file,{contentType:file.type,upsert:false});if(upErr)throw upErr;await addRecord('artwork',$('artTitle').value.trim(),$('artDescription').value.trim(),{storage_path:path,mime_type:file.type,size:file.size});$('artForm').reset();setStatus('artStatus','Saved securely in your private library.');await loadAll();}catch(e){setStatus('artStatus','Upload failed: '+e.message);}};
-$('shortForm').onsubmit=async e=>{e.preventDefault();const topic=$('shortTopic').value.trim(),len=Number($('shortLength').value),mood=$('shortMood').value;const hooks={Epic:'Wait until you see the final reveal…',Satisfying:'Stay for the cleanest part…',Mysterious:'Nobody expected this transformation…',Inspirational:'Every great piece starts with one line…',Funny:'This looked easier in my head…'};const a=Math.max(4,Math.round(len*.2)),b=Math.max(a+4,Math.round(len*.65));const plan=`HOOK (0–2s): “${hooks[mood]}”\nSETUP (2–${a}s): Show the starting sketch and the goal.\nBUILD (${a}–${b}s): 3–4 quick progress cuts; remove dead time.\nREVEAL (${b}–${len}s): Show the final artwork and one satisfying detail.\nCTA: “What should I draw next?”\nTITLE: ${topic} ✦ | Silent Strokes\nCAPTION: From idea to final frame.\nMOOD: ${mood} · LENGTH: ${len}s`;try{await addRecord('short',topic,plan,{length:len,mood});$('shortForm').reset();setStatus('shortStatus','Plan generated and saved to your private studio.');await loadAll();}catch(e){setStatus('shortStatus',e.message);}};
-$('noteForm').onsubmit=async e=>{e.preventDefault();try{await addRecord('note',$('noteTitle').value.trim(),$('noteBody').value.trim());$('noteForm').reset();setStatus('noteStatus','Private note saved.');await loadAll();}catch(e){setStatus('noteStatus',e.message);}};
-$('metricDate').value=new Date().toISOString().slice(0,10);$('metricForm').onsubmit=async e=>{e.preventDefault();const metadata={views:Number($('metricViews').value),likes:Number($('metricLikes').value),subscribers:Number($('metricSubs').value),date:$('metricDate').value};try{await addRecord('metric',$('metricLabel').value.trim(),'',metadata);$('metricForm').reset();$('metricDate').value=new Date().toISOString().slice(0,10);$('metricViews').value='0';$('metricLikes').value='0';$('metricSubs').value='0';setStatus('metricStatus','Snapshot saved.');await loadAll();}catch(e){setStatus('metricStatus',e.message);}};
-const palettes={forest:{green:'#0e2119',gold:'#b08b45',cream:'#f5f0e6'},violet:{green:'#20243a',gold:'#b5a7ff',cream:'#f0effb'},atelier:{green:'#59382d',gold:'#c47b5a',cream:'#f5f0e6'}};function applyTheme(key,notify=true){const p=palettes[key]||palettes.forest;document.documentElement.style.setProperty('--green',p.green);document.documentElement.style.setProperty('--gold',p.gold);document.documentElement.style.setProperty('--cream',p.cream);if(notify)setStatus('themeStatus','Theme updated in this session.');}
-document.querySelectorAll('[data-theme]').forEach(b=>b.onclick=async()=>{const theme=b.dataset.theme;applyTheme(theme);try{const {data}=await db.from('creator_studio_records').select('id').eq('user_id',user.id).eq('record_type','theme').limit(1);if(data?.[0]){const {error}=await db.from('creator_studio_records').update({title:'Studio theme',metadata:{theme},body:''}).eq('id',data[0].id).eq('user_id',user.id);if(error)throw error;}else await addRecord('theme','Studio theme','',{theme});setStatus('themeStatus','Theme saved privately.');}catch(e){setStatus('themeStatus','Theme changed, but could not save: '+e.message);}});
-// Secure AI Companion: invoke the authenticated Supabase Edge Function; no API key in the browser.
-$('aiForm').onsubmit=async e=>{e.preventDefault();if(!db||!user){setStatus('aiStatus','Please sign in with your authorized owner account first.');return;}const message=$('aiPrompt').value.trim();if(!message)return;const send=$('aiSend');send.disabled=true;send.textContent='Thinking…';$('aiReply').textContent='Generating your response…';setStatus('aiStatus','Connecting securely to Silent Strokes AI…');try{const {data,error}=await db.functions.invoke('ai-companion',{body:{message}});if(error){let detail=error.message||'AI request failed.';try{const ctx=error.context;if(ctx&&typeof ctx.json==='function'){const j=await ctx.json();if(j.error)detail=j.error;}}catch{}throw new Error(detail);}if(data?.error)throw new Error(data.error);$('aiReply').textContent=data?.reply||'No response was returned. Please try again.';setStatus('aiStatus',typeof data?.remainingThisHour==='number'?`Response ready · approximately ${data.remainingThisHour} messages remain this hour.`:'Response ready.');}catch(err){$('aiReply').textContent='';setStatus('aiStatus',err.message||'AI is unavailable. Check the Edge Function deployment and API billing.');}finally{send.disabled=false;send.textContent='Ask AI Companion';}};
-document.querySelectorAll('[data-ai-prompt]').forEach(b=>b.onclick=()=>{$('aiPrompt').value=b.dataset.aiPrompt;$('aiPrompt').focus();});
-boot();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2119">
+  <title>Silent Strokes Creator Studio</title>
+  <link rel="icon" type="image/png" href="./studio-favicon.png">
+
+  <style>
+    :root {
+      --cream: #f5f0e6;
+      --green: #0e2119;
+      --dark: #15241e;
+      --gold: #b08b45;
+      --muted: #aab5ad;
+      --line: rgba(255,255,255,.12);
+      --panel: #192d24;
+      --danger: #f0a4a4;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--green);
+      color: var(--cream);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hidden { display: none !important; }
+
+    .muted { color: var(--muted); }
+    .gold { color: var(--gold); }
+    .small { font-size: .88rem; }
+    .wrap { width: min(1180px, 94%); margin: auto; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+      letter-spacing: .04em;
+    }
+
+    .brand span { color: var(--gold); }
+
+    .button {
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 10px 15px;
+      color: var(--cream);
+      background: transparent;
+      transition: .2s;
+    }
+
+    .button:hover { background: rgba(176,139,69,.14); }
+    .button.primary { background: var(--gold); color: #101a14; font-weight: 700; }
+    .button.danger { border-color: #a65e5e; color: #ffc7c7; }
+    .button:disabled { opacity: .5; cursor: not-allowed; }
+
+    .auth {
+      max-width: 440px;
+      margin: 9vh auto;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--dark);
+    }
+
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 12px 0; }
+    h2 { margin-top: 0; }
+    h3 { margin-top: 0; }
+
+    .field { margin: 15px 0; }
+    label { display: block; margin-bottom: 7px; color: #e3d8c2; font-size: .92rem; }
+
+    input, textarea, select {
+      width: 100%;
+      color: var(--cream);
+      background: #0e1c16;
+      border: 1px solid #3b5145;
+      border-radius: 9px;
+      padding: 12px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+    textarea { min-height: 110px; resize: vertical; }
+    input[type="file"] { padding: 9px; }
+    input[type="checkbox"] { width: auto; }
+
+    .notice {
+      margin-top: 14px;
+      padding: 11px 13px;
+      border-radius: 9px;
+      background: rgba(255,255,255,.05);
+      overflow-wrap: anywhere;
+    }
+
+    .notice.error { color: var(--danger); }
+    .notice.success { color: #bde7c6; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 24px;
+      padding: 25px 0 60px;
+    }
+
+    .sidebar {
+      align-self: start;
+      position: sticky;
+      top: 12px;
+      background: var(--dark);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .nav { display: grid; gap: 5px; }
+
+    .nav button {
+      text-align: left;
+      padding: 12px;
+      color: var(--cream);
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+    }
+
+    .nav button:hover, .nav button.active {
+      background: rgba(176,139,69,.17);
+      color: #f4d89d;
+    }
+
+    .content { min-width: 0; }
+    .page { display: none; }
+    .page.active { display: block; }
+
+    .hero, .panel, .stat {
+      background: var(--dark);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .hero { margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 20px; }
+    .stat strong { display: block; font-size: 1.8rem; color: var(--gold); margin-top: 8px; }
+    .panel { margin-bottom: 16px; min-width: 0; }
+
+    .row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .row.between { justify-content: space-between; }
+    .item-list { display: grid; gap: 10px; margin-top: 16px; }
+
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .item p { white-space: pre-wrap; }
+    .item-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .item-actions .button { padding: 7px 10px; font-size: .85rem; }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      background: var(--panel);
+    }
+
+    .avatar-placeholder {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 2.3rem;
+      color: var(--gold);
+      background: var(--panel);
+      border: 2px solid var(--gold);
+    }
+
+    .chat-log {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .bubble {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 13px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .bubble.user { border-color: rgba(176,139,69,.55); }
+    .bubble.assistant { background: rgba(255,255,255,.04); }
+
+    .chat-form { display: grid; gap: 10px; }
+    .footer { text-align: center; color: var(--muted); padding: 24px 0; font-size: .85rem; }
+
+    body.light-theme {
+      --cream: #19271f;
+      --green: #f5f0e6;
+      --dark: #fffdf8;
+      --muted: #626c64;
+      --line: rgba(20,40,28,.16);
+      --panel: #eee7d9;
+    }
+
+    body.light-theme input,
+    body.light-theme textarea,
+    body.light-theme select {
+      color: #19271f;
+      background: #fffdf8;
+      border-color: #c9c0ae;
+    }
+
+    body.light-theme .nav button { color: #19271f; }
+
+    @media (max-width: 760px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid, .stats { grid-template-columns: 1fr; }
+      .auth { margin: 5vh auto; padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrap topbar">
+    <div class="brand">SILENT <span>STROKES</span> <small class="muted">/ STUDIO</small></div>
+    <div class="row">
+      <span id="ownerLabel" class="muted small"></span>
+      <button id="signOut" class="button hidden" type="button">Sign out</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="authView" class="auth">
+      <p class="gold small">PRIVATE CREATOR WORKSPACE</p>
+      <h1>Creator Studio</h1>
+      <p class="muted">Your private space for art, ideas, Shorts and creator tools.</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">Owner email</label>
+          <input id="email" type="email" autocomplete="username" required
+                 placeholder="Your authorised email">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required
+                 placeholder="Your Supabase account password">
+        </div>
+        <button class="button primary" type="submit" id="loginButton">Sign in securely</button>
+      </form>
+      <div id="authStatus" class="notice hidden" role="status"></div>
+      <p class="muted small">Access is restricted to the configured Studio owner. Use your existing Supabase Auth account.</p>
+    </section>
+
+    <section id="appView" class="hidden">
+      <div class="layout">
+        <aside class="sidebar">
+          <nav class="nav" id="nav">
+            <button class="active" data-page="dashboard">⌂ Dashboard</button>
+            <button data-page="artwork">✦ Artwork</button>
+            <button data-page="shorts">▶ Shorts</button>
+            <button data-page="notes">▤ Notes</button>
+            <button data-page="analytics">▥ Analytics</button>
+            <button data-page="ai">✧ Science Spokes AI</button>
+            <button data-page="profile">◎ My Profile</button>
+            <button data-page="themes">◐ Themes</button>
+          </nav>
+        </aside>
+
+        <div class="content">
+          <section class="page active" id="page-dashboard">
+            <div class="hero">
+              <p class="gold small">WHERE EVERY STROKE TELLS A STORY</p>
+              <h1>Your creative world.</h1>
+              <p class="muted">Welcome to your private Silent Strokes workspace.</p>
+              <div class="stats">
+                <div class="stat">Artwork records<strong id="statArtwork">0</strong></div>
+                <div class="stat">Shorts records<strong id="statShorts">0</strong></div>
+                <div class="stat">Saved notes<strong id="statNotes">0</strong></div>
+              </div>
+            </div>
+            <div class="panel">
+              <h2>Studio overview</h2>
+              <p id="overviewText" class="muted">Your private records will appear here after the database is connected.</p>
+              <button class="button" type="button" data-go="artwork">Open artwork</button>
+              <button class="button" type="button" data-go="ai">Ask Science Spokes AI</button>
+            </div>
+          </section>
+
+          <section class="page" id="page-artwork">
+            <div class="panel">
+              <h2>Artwork library</h2>
+              <p class="muted">Save artwork details and optionally upload an image to your private Studio storage.</p>
+              <form id="artworkForm">
+                <input id="artworkId" type="hidden">
+                <div class="field"><label for="artworkTitle">Artwork title</label><input id="artworkTitle" required maxlength="160"></div>
+                <div class="field"><label for="artworkDescription">Description</label><textarea id="artworkDescription" maxlength="5000"></textarea></div>
+                <div class="field"><label for="artworkFile">Artwork image (PNG, JPEG or WebP; max 5 MB)</label><input id="artworkFile" type="file" accept="image/png,image/jpeg,image/webp"></div>
+                <div class="row"><button class="button primary" type="submit">Save artwork</button><button class="button" id="cancelArtwork" type="button">Clear form</button></div>
+              </form>
+              <div id="artworkStatus" class="notice hidden" role="status"></div>
+              <div id="artworkList" class="item-list"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-shorts">
+            <div class="panel">
+              <h2>Shorts planner</h2>
+              <p class="muted">Keep track of ideas, titles, links and publishing status.</p>
+              <form id="shortsForm">
+                <input id="shortId" type="hidden">
+                <div class="field"><label for="shortTitle">Short title / idea</label><input id="shortTitle" required maxlength="160"></div>
+                <div class="field"><label for="shortDescription">Description or script</label><textarea id="shortDescription" maxlength="5000"></textarea></div>
+                <div class="field"><label for="shortUrl">Published video URL (optional)</label><input id="shortUrl" type="url" placeholder="https://www.youtube.com/shorts/..."></div>
+                <div class="field"><label for="shortStatus">Status</label><select id="shortStatus"><option>Idea</option><option>Planning</option><option>Ready</option><option>Published</option></select></div>
+                <div class="row"><button class="button primary" type="submit">Save Short</button><button class="button" id="cancelShort" type="button">Clear form</button></div>
+              </form>
+              <div id="shortsStatus" class="notice hidden" role="status"></div>
+              <div id="shortsList" class="item-list"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-notes">
+            <div class="panel">
+              <h2>Private notes</h2>
+              <form id="notesForm">
+                <input id="noteId" type="hidden">
+                <div class="field"><label for="noteTitle">Note title</label><input id="noteTitle" required maxlength="160"></div>
+                <div class="field"><label for="noteBody">Your note</label><textarea id="noteBody" required maxlength="10000"></textarea></div>
+                <div class="row"><button class="button primary" type="submit">Save note</button><button class="button" id="cancelNote" type="button">Clear form</button></div>
+              </form>
+              <div id="notesStatus" class="notice hidden" role="status"></div>
+              <div id="notesList" class="item-list"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-analytics">
+            <div class="panel">
+              <h2>Studio analytics</h2>
+              <p class="muted">This page reports the number of records saved in your private Studio database. It does not claim to be live YouTube analytics.</p>
+              <div class="stats">
+                <div class="stat">Artwork<strong id="analyticsArtwork">0</strong></div>
+                <div class="stat">Shorts<strong id="analyticsShorts">0</strong></div>
+                <div class="stat">Notes<strong id="analyticsNotes">0</strong></div>
+              </div>
+              <div class="field"><label for="analyticsDate">Report generated</label><input id="analyticsDate" readonly></div>
+              <button class="button" id="refreshData" type="button">Refresh analytics</button>
+              <div id="analyticsStatus" class="notice hidden" role="status"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-ai">
+            <div class="panel">
+              <p class="gold small">YOUR CREATIVE AI COMPANION</p>
+              <h2>Science Spokes AI</h2>
+              <p class="muted">Ask questions, explore science concepts, brainstorm artwork, or develop video ideas.</p>
+              <div id="chatLog" class="chat-log" aria-live="polite">
+                <div class="bubble assistant">Hello! I'm Science Spokes AI. What would you like to explore today?</div>
+              </div>
+              <form id="aiForm" class="chat-form">
+                <label for="aiMessage">Your message</label>
+                <textarea id="aiMessage" required maxlength="4000" placeholder="Ask Science Spokes AI..."></textarea>
+                <div class="row">
+                  <button class="button primary" id="aiSend" type="submit">Send message</button>
+                  <button class="button" id="clearChat" type="button">Clear conversation</button>
+                </div>
+              </form>
+              <div id="aiStatus" class="notice hidden" role="status"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-profile">
+            <div class="panel">
+              <h2>My Profile</h2>
+              <p class="muted">Manage your private Creator Studio profile. Your profile picture is stored in a private bucket, not a public image URL.</p>
+              <div class="row" style="align-items:center;margin:20px 0">
+                <img id="profileAvatar" class="avatar hidden" alt="Your profile picture">
+                <div id="profileAvatarPlaceholder" class="avatar-placeholder" aria-label="Profile picture placeholder">◎</div>
+                <div class="small muted">PNG, JPEG or WebP · Maximum 5 MB</div>
+              </div>
+              <div class="field">
+                <label for="profileFile">Upload profile picture</label>
+                <input id="profileFile" type="file" accept="image/png,image/jpeg,image/webp">
+              </div>
+              <form id="profileForm">
+                <div class="field"><label for="profileDisplayName">Display name</label><input id="profileDisplayName" maxlength="100" placeholder="Your display name"></div>
+                <div class="field"><label for="profileUsername">Username</label><input id="profileUsername" maxlength="40" placeholder="Your username"></div>
+                <div class="field"><label for="profileBio">Bio</label><textarea id="profileBio" maxlength="1000" placeholder="A little about your creative journey"></textarea></div>
+                <div class="field"><label for="profileAccountId">Supabase account ID</label><input id="profileAccountId" readonly></div>
+                <button class="button primary" type="submit">Save profile</button>
+              </form>
+              <div id="profileStatus" class="notice hidden" role="status"></div>
+            </div>
+          </section>
+
+          <section class="page" id="page-themes">
+            <div class="panel">
+              <h2>Studio appearance</h2>
+              <p class="muted">Choose the look that suits your workspace.</p>
+              <div class="row">
+                <button class="button primary" id="darkTheme" type="button">Luxury dark</button>
+                <button class="button" id="lightTheme" type="button">Light cream</button>
+              </div>
+              <p class="small muted">Your theme selection is saved in this browser.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">Silent Strokes Creator Studio · Where Every Stroke Tells a Story</footer>
+
+  <script src="./supabase-config.js"></script>
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+    const cfg = window.SS_CONFIG || {};
+    const OWNER_EMAIL = "sailaksh07@outlook.com";
+    const PROFILE_BUCKET = "studio-profile-pictures";
+    const ART_BUCKET = "studio-private-files";
+    const $ = (id) => document.getElementById(id);
+
+    let db = null;
+    let user = null;
+    let records = [];
+    let profileAvatarPath = null;
+    let artworkUploadPath = null;
+
+    const kinds = ["artwork", "short", "note"];
+
+    function showStatus(id, message, type = "") {
+      const el = $(id);
+      el.textContent = message;
+      el.className = "notice" + (type ? " " + type : "");
+      el.classList.remove("hidden");
+    }
+
+    function clearStatus(id) {
+      const el = $(id);
+      el.textContent = "";
+      el.className = "notice hidden";
+    }
+
+    function escapeText(value) {
+      return String(value ?? "");
+    }
+
+    function setBusy(button, busy, busyText = "Please wait…") {
+      if (!button.dataset.originalText) button.dataset.originalText = button.textContent;
+      button.disabled = busy;
+      button.textContent = busy ? busyText : button.dataset.originalText;
+    }
+
+    function page(name) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.querySelectorAll(".nav button").forEach(b => b.classList.toggle("active", b.dataset.page === name));
+      const target = $("page-" + name);
+      if (target) target.classList.add("active");
+    }
+
+    function showApp() {
+      $("authView").classList.add("hidden");
+      $("appView").classList.remove("hidden");
+      $("signOut").classList.remove("hidden");
+      $("ownerLabel").textContent = user?.email || "Owner";
+      page("dashboard");
+      loadAll();
+      loadStudioProfile();
+    }
+
+    async function verifyOwner(currentUser) {
+      if (!currentUser?.id || !currentUser.email) throw new Error("No signed-in account was found.");
+
+      if (currentUser.email.toLowerCase() !== OWNER_EMAIL.toLowerCase()) {
+        throw new Error("This account is not authorised to access Creator Studio.");
+      }
+
+      // The database allowlist is an additional owner check.
+      const { data, error } = await db
+        .from("creator_studio_owners")
+        .select("user_id")
+        .eq("user_id", currentUser.id)
+        .maybeSingle();
+
+      if (error) throw new Error("Could not verify Studio owner access: " + error.message);
+      if (!data) throw new Error("Your account is not listed in creator_studio_owners. Add the owner account in Supabase first.");
+    }
+
+    async function restoreSession() {
+      const { data, error } = await db.auth.getSession();
+      if (error) throw error;
+      if (!data.session) return;
+
+      user = data.session.user;
+      try {
+        await verifyOwner(user);
+        showApp();
+      } catch (err) {
+        await db.auth.signOut();
+        user = null;
+        showStatus("authStatus", err.message, "error");
+      }
+    }
+
+    async function boot() {
+      if (!cfg.supabaseUrl || !cfg.supabaseAnonKey) {
+        showStatus("authStatus", "Supabase configuration is missing. Check supabase-config.js and ensure it is in the same folder as studio.html.", "error");
+        return;
+      }
+
+      db = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
+        auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+      });
+
+      $("loginForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        clearStatus("authStatus");
+        const button = $("loginButton");
+        setBusy(button, true, "Signing in…");
+
+        try {
+          const email = $("email").value.trim();
+          const password = $("password").value;
+          const { data, error } = await db.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+
+          user = data.user;
+          await verifyOwner(user);
+          showApp();
+        } catch (err) {
+          await db.auth.signOut();
+          user = null;
+          showStatus("authStatus", err.message || "Sign-in failed.", "error");
+        } finally {
+          setBusy(button, false);
+        }
+      });
+
+      $("signOut").addEventListener("click", async () => {
+        await db.auth.signOut();
+        user = null;
+        $("appView").classList.add("hidden");
+        $("authView").classList.remove("hidden");
+        $("signOut").classList.add("hidden");
+        $("ownerLabel").textContent = "";
+        showStatus("authStatus", "You have signed out.", "success");
+      });
+
+      $("nav").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-page]");
+        if (!button) return;
+        page(button.dataset.page);
+        if (button.dataset.page === "profile") loadStudioProfile();
+      });
+
+      document.querySelectorAll("[data-go]").forEach(button => {
+        button.addEventListener("click", () => page(button.dataset.go));
+      });
+
+      $("darkTheme").addEventListener("click", () => {
+        document.body.classList.remove("light-theme");
+        localStorage.setItem("ss-studio-theme", "dark");
+      });
+
+      $("lightTheme").addEventListener("click", () => {
+        document.body.classList.add("light-theme");
+        localStorage.setItem("ss-studio-theme", "light");
+      });
+
+      if (localStorage.getItem("ss-studio-theme") === "light") {
+        document.body.classList.add("light-theme");
+      }
+
+      wireItemForms();
+      wireProfile();
+      wireAI();
+
+      $("refreshData").addEventListener("click", loadAll);
+      await restoreSession();
+    }
+
+    async function loadAll() {
+      if (!user) return;
+      try {
+        const { data, error } = await db.from("studio_items")
+          .select("id,user_id,kind,title,description,url,status,storage_path,created_at")
+          .eq("user_id", user.id)
+          .order("created_at", { ascending: false });
+
+        if (error) throw error;
+        records = data || [];
+        renderItems("artwork", "artworkList");
+        renderItems("short", "shortsList");
+        renderItems("note", "notesList");
+        updateStats();
+        $("analyticsDate").value = new Date().toLocaleString();
+        showStatus("analyticsStatus", "Studio records refreshed.", "success");
+        $("overviewText").textContent = records.length
+          ? "Your saved records are loaded from your private Studio database."
+          : "Your Studio is ready. Add artwork, plan a Short, or save a private note.";
+      } catch (err) {
+        showStatus("analyticsStatus", "Could not load Studio records: " + err.message + ". Check the studio_items table and its Row Level Security policies.", "error");
+      }
+    }
+
+    function updateStats() {
+      const counts = {
+        artwork: records.filter(r => r.kind === "artwork").length,
+        short: records.filter(r => r.kind === "short").length,
+        note: records.filter(r => r.kind === "note").length
+      };
+
+      $("statArtwork").textContent = counts.artwork;
+      $("statShorts").textContent = counts.short;
+      $("statNotes").textContent = counts.note;
+      $("analyticsArtwork").textContent = counts.artwork;
+      $("analyticsShorts").textContent = counts.short;
+      $("analyticsNotes").textContent = counts.note;
+    }
+
+    function renderItems(kind, containerId) {
+      const container = $(containerId);
+      container.replaceChildren();
+      const list = records.filter(r => r.kind === kind);
+
+      if (!list.length) {
+        const empty = document.createElement("p");
+        empty.className = "muted small";
+        empty.textContent = "Nothing saved here yet.";
+        container.appendChild(empty);
+        return;
+      }
+
+      for (const record of list) {
+        const item = document.createElement("article");
+        item.className = "item";
+
+        const title = document.createElement("h3");
+        title.textContent = record.title || "Untitled";
+        item.appendChild(title);
+
+        if (record.description) {
+          const desc = document.createElement("p");
+          desc.textContent = record.description;
+          item.appendChild(desc);
+        }
+
+        if (record.status) {
+          const status = document.createElement("p");
+          status.className = "small gold";
+          status.textContent = "Status: " + record.status;
+          item.appendChild(status);
+        }
+
+        if (record.url) {
+          try {
+            const url = new URL(record.url);
+            if (url.protocol === "https:" || url.protocol === "http:") {
+              const link = document.createElement("a");
+              link.href = url.href;
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+              link.textContent = "Open link";
+              link.className = "gold";
+              item.appendChild(link);
+            }
+          } catch {}
+        }
+
+        if (record.storage_path && kind === "artwork") {
+          const image = document.createElement("img");
+          image.alt = "Private artwork preview";
+          image.loading = "lazy";
+          image.style.cssText = "display:block;max-width:100%;max-height:260px;border-radius:10px;margin-top:10px";
+          item.appendChild(image);
+          makeSignedUrl(ART_BUCKET, record.storage_path).then(url => {
+            if (url) image.src = url;
+          }).catch(() => {});
+        }
+
+        const actions = document.createElement("div");
+        actions.className = "item-actions";
+
+        const edit = document.createElement("button");
+        edit.className = "button";
+        edit.type = "button";
+        edit.textContent = "Edit";
+        edit.addEventListener("click", () => editRecord(record));
+        actions.appendChild(edit);
+
+        const remove = document.createElement("button");
+        remove.className = "button danger";
+        remove.type = "button";
+        remove.textContent = "Delete";
+        remove.addEventListener("click", () => deleteRecord(record));
+        actions.appendChild(remove);
+
+        item.appendChild(actions);
+        container.appendChild(item);
+      }
+    }
+
+    function wireItemForms() {
+      $("artworkForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        await saveItem("artwork", {
+          title: $("artworkTitle").value.trim(),
+          description: $("artworkDescription").value.trim(),
+          status: "",
+          url: ""
+        }, "artworkStatus", $("artworkForm"));
+      });
+
+      $("shortsForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        await saveItem("short", {
+          title: $("shortTitle").value.trim(),
+          description: $("shortDescription").value.trim(),
+          url: $("shortUrl").value.trim(),
+          status: $("shortStatus").value
+        }, "shortsStatus", $("shortsForm"));
+      });
+
+      $("notesForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        await saveItem("note", {
+          title: $("noteTitle").value.trim(),
+          description: $("noteBody").value.trim(),
+          status: "",
+          url: ""
+        }, "notesStatus", $("notesForm"));
+      });
+
+      $("cancelArtwork").addEventListener("click", () => {
+        $("artworkForm").reset();
+        $("artworkId").value = "";
+        artworkUploadPath = null;
+        clearStatus("artworkStatus");
+      });
+
+      $("cancelShort").addEventListener("click", () => {
+        $("shortsForm").reset();
+        $("shortId").value = "";
+        clearStatus("shortsStatus");
+      });
+
+      $("cancelNote").addEventListener("click", () => {
+        $("notesForm").reset();
+        $("noteId").value = "";
+        clearStatus("notesStatus");
+      });
+    }
+
+    async function saveItem(kind, values, statusId, form) {
+      const button = form.querySelector('button[type="submit"]');
+      setBusy(button, true, "Saving…");
+      clearStatus(statusId);
+
+      try {
+        if (!user) throw new Error("Please sign in again.");
+
+        let storagePath = null;
+        if (kind === "artwork") {
+          const file = $("artworkFile").files?.[0];
+
+          if (file) {
+            validateImage(file);
+            const ext = file.type === "image/jpeg" ? "jpg" : file.type.split("/")[1];
+            storagePath = `${user.id}/artwork-${crypto.randomUUID()}.${ext}`;
+
+            const { error: uploadError } = await db.storage.from(ART_BUCKET).upload(storagePath, file, {
+              upsert: false,
+              contentType: file.type
+            });
+            if (uploadError) throw uploadError;
+          } else {
+            storagePath = artworkUploadPath;
+          }
+        }
+
+        const idField = kind === "artwork" ? "artworkId" : kind === "short" ? "shortId" : "noteId";
+        const id = $(idField).value;
+
+        const payload = {
+          user_id: user.id,
+          kind,
+          title: values.title,
+          description: values.description,
+          url: values.url || null,
+          status: values.status || null,
+          storage_path: storagePath || null
+        };
+
+        let result;
+        if (id) {
+          result = await db.from("studio_items").update(payload).eq("id", id).eq("user_id", user.id);
+        } else {
+          result = await db.from("studio_items").insert(payload);
+        }
+
+        if (result.error) throw result.error;
+
+        form.reset();
+        $(idField).value = "";
+        artworkUploadPath = null;
+        showStatus(statusId, "Saved successfully.", "success");
+        await loadAll();
+      } catch (err) {
+        showStatus(statusId, "Could not save: " + err.message, "error");
+      } finally {
+        setBusy(button, false);
+      }
+    }
+
+    function editRecord(record) {
+      if (record.kind === "artwork") {
+        $("artworkId").value = record.id;
+        $("artworkTitle").value = record.title || "";
+        $("artworkDescription").value = record.description || "";
+        artworkUploadPath = record.storage_path || null;
+        page("artwork");
+        showStatus("artworkStatus", "Editing existing artwork. Choose a new image to replace the current one, or leave the image field empty to retain it.", "success");
+      } else if (record.kind === "short") {
+        $("shortId").value = record.id;
+        $("shortTitle").value = record.title || "";
+        $("shortDescription").value = record.description || "";
+        $("shortUrl").value = record.url || "";
+        $("shortStatus").value = record.status || "Idea";
+        page("shorts");
+      } else if (record.kind === "note") {
+        $("noteId").value = record.id;
+        $("noteTitle").value = record.title || "";
+        $("noteBody").value = record.description || "";
+        page("notes");
+      }
+    }
+
+    async function deleteRecord(record) {
+      if (!confirm(`Delete "${record.title}"? This cannot be undone.`)) return;
+
+      try {
+        const { error } = await db.from("studio_items")
+          .delete().eq("id", record.id).eq("user_id", user.id);
+        if (error) throw error;
+
+        if (record.storage_path) {
+          const { error: storageError } = await db.storage.from(ART_BUCKET).remove([record.storage_path]);
+          if (storageError) console.warn("Record deleted, but its image could not be removed:", storageError.message);
+        }
+
+        await loadAll();
+      } catch (err) {
+        alert("Could not delete the record: " + err.message);
+      }
+    }
+
+    function validateImage(file) {
+      const allowed = ["image/png", "image/jpeg", "image/webp"];
+      if (!allowed.includes(file.type)) throw new Error("Choose a PNG, JPEG or WebP image.");
+      if (file.size > 5 * 1024 * 1024) throw new Error("The image must be 5 MB or smaller.");
+    }
+
+    async function makeSignedUrl(bucket, path) {
+      const { data, error } = await db.storage.from(bucket).createSignedUrl(path, 3600);
+      if (error) throw error;
+      return data.signedUrl;
+    }
+
+    async function loadStudioProfile() {
+      if (!user) return;
+
+      $("profileAccountId").value = user.id;
+      clearStatus("profileStatus");
+
+      try {
+        const { data, error } = await db.from("studio_profiles")
+          .select("id,display_name,username,bio,avatar_path")
+          .eq("id", user.id)
+          .maybeSingle();
+
+        if (error) throw error;
+
+        if (data) {
+          $("profileDisplayName").value = data.display_name || "";
+          $("profileUsername").value = data.username || "";
+          $("profileBio").value = data.bio || "";
+          profileAvatarPath = data.avatar_path || null;
+
+          if (profileAvatarPath) {
+            const url = await makeSignedUrl(PROFILE_BUCKET, profileAvatarPath);
+            $("profileAvatar").src = url;
+            $("profileAvatar").classList.remove("hidden");
+            $("profileAvatarPlaceholder").classList.add("hidden");
+          } else {
+            $("profileAvatar").classList.add("hidden");
+            $("profileAvatarPlaceholder").classList.remove("hidden");
+          }
+        }
+      } catch (err) {
+        showStatus("profileStatus", "Could not load profile: " + err.message + ". Check the studio_profiles table and private Storage policies.", "error");
+      }
+    }
+
+    function wireProfile() {
+      $("profileFile").addEventListener("change", async () => {
+        const file = $("profileFile").files?.[0];
+        if (!file) return;
+
+        try {
+          validateImage(file);
+          showStatus("profileStatus", "Uploading your private profile picture…");
+          const ext = file.type === "image/jpeg" ? "jpg" : file.type.split("/")[1];
+          const path = `${user.id}/profile.${ext}`;
+
+          const { error } = await db.storage.from(PROFILE_BUCKET).upload(path, file, {
+            upsert: true,
+            contentType: file.type
+          });
+          if (error) throw error;
+
+          profileAvatarPath = path;
+          const url = await makeSignedUrl(PROFILE_BUCKET, path);
+          $("profileAvatar").src = url;
+          $("profileAvatar").classList.remove("hidden");
+          $("profileAvatarPlaceholder").classList.add("hidden");
+
+          showStatus("profileStatus", "Picture uploaded privately. Select Save profile to save the profile details and picture path.", "success");
+        } catch (err) {
+          showStatus("profileStatus", "Picture upload failed: " + err.message, "error");
+        }
+      });
+
+      $("profileForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const button = $("profileForm").querySelector('button[type="submit"]');
+        setBusy(button, true, "Saving…");
+
+        try {
+          const payload = {
+            id: user.id,
+            display_name: $("profileDisplayName").value.trim(),
+            username: $("profileUsername").value.trim(),
+            bio: $("profileBio").value.trim(),
+            avatar_path: profileAvatarPath,
+            updated_at: new Date().toISOString()
+          };
+
+          const { error } = await db.from("studio_profiles").upsert(payload, { onConflict: "id" });
+          if (error) throw error;
+          showStatus("profileStatus", "Your profile has been saved.", "success");
+        } catch (err) {
+          showStatus("profileStatus", "Could not save profile: " + err.message, "error");
+        } finally {
+          setBusy(button, false);
+        }
+      });
+    }
+
+    function addBubble(role, message) {
+      const bubble = document.createElement("div");
+      bubble.className = "bubble " + role;
+      bubble.textContent = message;
+      $("chatLog").appendChild(bubble);
+      bubble.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+
+    function wireAI() {
+      $("aiForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const message = $("aiMessage").value.trim();
+        if (!message) return;
+
+        const button = $("aiSend");
+        setBusy(button, true, "Thinking…");
+        clearStatus("aiStatus");
+        addBubble("user", message);
+        $("aiMessage").value = "";
+
+        try {
+          // The AI provider key must be stored as a Supabase Edge Function secret,
+          // never in this HTML file or supabase-config.js.
+          const { data, error } = await db.functions.invoke("ai-companion", {
+            body: { message }
+          });
+
+          if (error) {
+            let detail = error.message || "The AI function returned an error.";
+            try {
+              if (error.context && typeof error.context.json === "function") {
+                const body = await error.context.json();
+                detail = body.error || body.message || detail;
+              }
+            } catch {}
+            throw new Error(detail);
+          }
+
+          const answer = data?.reply || data?.response || data?.answer || data?.message;
+          if (typeof answer !== "string" || !answer.trim()) {
+            throw new Error("The AI function responded, but no reply text was found. Check that ai-companion returns { reply: \"...\" }.");
+          }
+
+          addBubble("assistant", answer.trim());
+        } catch (err) {
+          showStatus("aiStatus", "Science Spokes AI could not respond: " + err.message + " Check that the ai-companion Edge Function is deployed, its secrets are configured, and its request/response format matches this page.", "error");
+        } finally {
+          setBusy(button, false);
+        }
+      });
+
+      $("clearChat").addEventListener("click", () => {
+        $("chatLog").replaceChildren();
+        addBubble("assistant", "Conversation cleared. What would you like to explore next?");
+        clearStatus("aiStatus");
+      });
+    }
+
+    boot();
+  </script>
+</body>
+</html>
