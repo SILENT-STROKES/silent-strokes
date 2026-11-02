@@ -1,0 +1,7 @@
+# This project is a static portfolio website for Silent Strokes.
+# Update the sitemap URL to your live deployment when published.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://silent-strokes.github.io/silent-strokes/sitemap.xml
