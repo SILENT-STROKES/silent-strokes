@@ -1,0 +1,51 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glowRed" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#FF1D1D" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#FF1D1D" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#18D7FF" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#18D7FF" flood-opacity="0.7"/>
+    </filter>
+    <linearGradient id="shirtGrad" x1="140" y1="120" x2="350" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1E1E"/>
+      <stop offset="1" stop-color="#04070C"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#glowRed)">
+    <path d="M142 93L118 125L150 157L112 196L163 197L200 160L212 131L177 93H142Z" stroke="#FF2D2D" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M265 118L236 72L298 72L390 156L220 156L265 118Z" fill="none" stroke="#FF2D2D" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M210 150L155 204L137 273L159 304L188 273L181 218L228 170L210 150Z" fill="#FF2D2D" opacity="0.12"/>
+    <path d="M173 90L100 120L112 175L147 170L179 121L173 90Z" fill="none" stroke="#FF2D2D" stroke-width="18" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#glowRed)">
+    <path d="M178 190C182 170 195 156 211 149C228 142 246 144 260 152C276 161 288 176 291 193C294 209 290 226 281 239C274 249 266 258 266 270C266 283 271 295 281 304L273 323C256 312 239 306 221 305C204 304 183 312 170 328L161 311C172 295 182 282 182 270C182 257 176 245 167 234C156 220 151 207 154 193C158 180 166 171 178 190Z" fill="#0A0D12" stroke="#FF2D2D" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M178 216C147 216 122 242 122 273V308C122 341 146 370 181 370H219C242 370 260 354 260 333V306C260 285 240 271 216 271H188C181 271 175 269 170 265C162 259 159 250 160 240C161 230 169 223 178 216Z" fill="url(#shirtGrad)" stroke="#FF2D2D" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M182 286C188 271 209 260 230 262C246 264 261 272 269 286C278 302 278 322 265 336C255 347 238 355 221 356C202 357 182 349 170 335C160 323 156 308 162 295C167 289 173 286 182 286Z" fill="#1B1E22" stroke="#FF2D2D" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#glowCyan)">
+    <path d="M304 118L425 118L430 145L377 182L366 210L327 205L300 161L304 118Z" fill="#0A0B0D" stroke="#1ED7FF" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M354 153L432 80L434 84L364 179L354 153Z" fill="#1ED7FF"/>
+    <path d="M380 82L335 117L350 124L414 84L380 82Z" fill="#1ED7FF"/>
+  </g>
+
+  <g filter="url(#glowRed)">
+    <path d="M53 172L156 156L150 195L63 210L53 172Z" fill="#0A0C10" stroke="#FF2D2D" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M96 152L54 43L91 37L130 151L96 152Z" fill="#0A0C10" stroke="#FF2D2D" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M78 38L62 20L84 8L106 31L78 38Z" fill="#FF2D2D"/>
+  </g>
+
+  <g filter="url(#glowCyan)">
+    <path d="M365 142L436 142L436 223L365 223L365 142Z" fill="#0A0C10" stroke="#1ED7FF" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M364 224L418 288L396 313L334 246L364 224Z" fill="#0A0C10" stroke="#1ED7FF" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M356 290L392 356L365 375L322 305L356 290Z" fill="#1ED7FF"/>
+  </g>
+
+  <g filter="url(#glowRed)">
+    <path d="M176 202C185 198 194 197 203 198C215 198 227 201 236 208C246 215 253 226 252 239C251 250 245 261 234 270C225 277 214 282 203 282C195 282 186 280 178 276C169 272 160 267 154 258C147 248 146 235 151 224C157 213 168 205 176 202Z" fill="#0A0C10" stroke="#FF2D2D" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+</svg>
