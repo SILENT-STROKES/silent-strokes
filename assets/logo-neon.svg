@@ -1,0 +1,65 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="redGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#FF2C2C" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#FF2C2C" flood-opacity="0.8"/>
+    </filter>
+    <filter id="cyanGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#18D7FF" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#18D7FF" flood-opacity="0.8"/>
+    </filter>
+    <linearGradient id="shirtGrad" x1="390" y1="350" x2="770" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111820"/>
+      <stop offset="1" stop-color="#02070B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="#03070A"/>
+
+  <g filter="url(#redGlow)">
+    <path d="M235 230L165 465L280 455L310 370L517 530L370 178L235 230Z" fill="none" stroke="#FF2C2C" stroke-width="22" stroke-linejoin="round"/>
+    <path d="M621 172L523 206L596 290L720 300L785 254L743 172H621Z" fill="none" stroke="#FF2C2C" stroke-width="22" stroke-linejoin="round"/>
+    <path d="M367 362L286 559L437 586L487 474L594 564L547 442L600 323L367 362Z" fill="none" stroke="#FF2C2C" stroke-width="22" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#redGlow)">
+    <path d="M420 310C468 248 566 224 640 246C713 268 770 334 785 407C802 486 778 558 713 603C692 618 660 631 641 645C598 668 566 695 555 741C548 770 556 807 577 833C593 853 610 867 643 888L617 943C569 922 524 908 480 914C430 920 392 936 356 969L318 918C350 883 378 857 389 822C399 788 392 757 370 727C339 686 299 661 288 609C276 553 280 514 307 474C332 437 356 420 420 310Z" fill="url(#shirtGrad)" stroke="#FF2C2C" stroke-width="15" stroke-linejoin="round"/>
+    <path d="M530 474C554 448 591 436 628 443C684 454 723 510 726 569C729 626 696 681 646 709C620 724 585 734 548 730C499 725 454 692 436 641C421 599 425 553 444 517C465 478 497 457 530 474Z" fill="#0A0E13" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M557 653C581 626 617 609 655 611C694 614 732 633 757 666C780 698 785 740 771 775C759 805 731 833 690 848C643 864 600 859 563 839C529 821 495 788 488 752C479 712 505 680 557 653Z" fill="#0D1016" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#cyanGlow)">
+    <path d="M790 330L1010 330L1010 438L913 489L875 561L823 547L780 470L790 330Z" fill="#0A0E12" stroke="#18D7FF" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M889 355L1050 208L1051 212L930 472L889 355Z" fill="#18D7FF"/>
+    <path d="M906 209L830 330L852 347L1014 229L906 209Z" fill="#18D7FF"/>
+  </g>
+
+  <g filter="url(#redGlow)">
+    <path d="M194 407L330 362L345 412L216 470L194 407Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M258 322L181 182L236 172L325 323L258 322Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M219 176L190 143L242 128L284 169L219 176Z" fill="#FF2C2C"/>
+  </g>
+
+  <g filter="url(#cyanGlow)">
+    <path d="M822 414L962 417L962 521L822 521L822 414Z" fill="#0A0E12" stroke="#18D7FF" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M821 519L918 611L879 668L773 581L821 519Z" fill="#0A0E12" stroke="#18D7FF" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M797 652L875 736L834 782L760 696L797 652Z" fill="#18D7FF"/>
+  </g>
+
+  <g filter="url(#redGlow)">
+    <path d="M280 390L467 350L500 449L318 502L280 390Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M484 370L655 299L682 399L501 469L484 370Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#redGlow)">
+    <path d="M564 858L760 806L774 904L590 938L564 858Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M628 679L742 688L704 792L612 785L628 679Z" fill="#0A0E12" stroke="#FF2C2C" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="145" y="988" width="910" height="125" rx="18" fill="#FF2C2C" stroke="#FF2C2C" stroke-width="8" filter="url(#redGlow)"/>
+    <text x="600" y="1075" text-anchor="middle" font-size="102" font-weight="900" letter-spacing="2" fill="#FDF2F2" font-family="Arial Black, Segoe UI, sans-serif">SILENT STROKES</text>
+    <rect x="240" y="1105" width="720" height="84" rx="14" fill="#050B10" stroke="#18D7FF" stroke-width="8" filter="url(#cyanGlow)"/>
+    <text x="600" y="1162" text-anchor="middle" font-size="52" font-weight="800" fill="#18D7FF" font-family="Arial Black, Segoe UI, sans-serif" letter-spacing="1">@SAILAKSH-DRAWIN_OFFICIAL</text>
+  </g>
+</svg>
