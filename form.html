@@ -1,27 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Community Form | Silent Strokes</title>
     <meta name="theme-color" content="#0b0b0b">
-    <meta name="description" content="Connect with the Silent Strokes creative community.">
+    <meta name="description" content="Connect with the Silent Strokes creative community. Share an idea, suggestion, or feedback with artist B Sailakshanth.">
+    <meta name="author" content="B Sailakshanth">
+    <meta name="robots" content="index,follow">
+    <title>Community Form | Silent Strokes</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Silent Strokes">
+    <meta property="og:title" content="Community Form | Silent Strokes">
+    <meta property="og:description" content="Connect with the Silent Strokes creative community. Share an idea, suggestion, or feedback.">
+    <meta property="og:image" content="https://i.postimg.cc/RZpHJH27/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg">
+    <meta property="og:image:alt" content="Silent Strokes logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community Form | Silent Strokes">
+    <meta name="twitter:description" content="Connect with the Silent Strokes creative community. Share an idea, suggestion, or feedback.">
+    <meta name="twitter:image" content="https://i.postimg.cc/RZpHJH27/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg">
 
     <style>
-        * {
-            box-sizing: border-box;
+        * { box-sizing: border-box; }
+
+        :root {
+            color-scheme: dark;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: #fff;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
             color: white;
             background: #0b0b0b;
         }
 
-        /* HEADER AND LOGO */
+        a, button, iframe { -webkit-tap-highlight-color: transparent; }
+
+        a:focus-visible, button:focus-visible, iframe:focus-visible {
+            outline: 3px solid #ff7777;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: fixed;
+            z-index: 20;
+            top: 12px;
+            left: 12px;
+            padding: 12px 16px;
+            color: #111;
+            background: #fff;
+            border-radius: 8px;
+            transform: translateY(-160%);
+            transition: transform .2s ease;
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
         header {
             padding: 16px 6%;
             display: flex;
@@ -33,16 +73,12 @@
             border-bottom: 1px solid #292929;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        .brand { display: flex; align-items: center; gap: 12px; }
 
         .brand-logo {
             width: 58px;
             height: 58px;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
         }
@@ -54,52 +90,60 @@
             color: white;
         }
 
-        .brand-name span {
-            color: #ff3535;
-        }
+        .brand-name span { color: #ff5555; }
 
         .back-link {
             color: white;
             text-decoration: none;
-            border: 1px solid #ff3535;
+            border: 1px solid #ff5555;
             border-radius: 8px;
             padding: 11px 15px;
-            transition: 0.3s;
+            transition: background .2s ease, color .2s ease;
             font-size: 14px;
         }
 
-        .back-link:hover {
-            background: #ff3535;
-        }
+        .back-link:hover { background: #ff3535; }
 
-        /* PAGE CONTENT */
         main {
+            position: relative;
+            isolation: isolate;
             width: min(1000px, 92%);
             margin: 55px auto;
             text-align: center;
+            animation: content-enter .65s ease both;
+        }
+
+        /* A gentle, decorative light follows the pointer without replacing the native cursor. */
+        main::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: -100px -8%;
+            pointer-events: none;
+            background: radial-gradient(320px circle at var(--pointer-x, 50%) var(--pointer-y, 20%), rgba(255, 53, 53, .10), transparent 72%);
+            opacity: 0;
+            transition: opacity .25s ease;
         }
 
         .tag {
-            color: #ff4545;
+            color: #ff7777;
             font-size: 12px;
             font-weight: bold;
             letter-spacing: 4px;
         }
 
-        h1 {
-            font-size: clamp(34px, 6vw, 54px);
-            margin: 18px 0;
-        }
+        h1 { font-size: clamp(34px, 6vw, 54px); margin: 18px 0; }
 
         .description {
-            color: #bbb;
+            color: #c7c7c7;
             line-height: 1.8;
             max-width: 650px;
             margin: 0 auto 35px;
         }
 
-        /* MICROSOFT FORM */
         .form-box {
+            position: relative;
+            min-height: 700px;
             background: white;
             border-radius: 14px;
             overflow: hidden;
@@ -108,129 +152,162 @@
         }
 
         iframe {
+            position: relative;
+            z-index: 1;
             display: block;
             width: 100%;
             height: 700px;
             border: none;
+            background: white;
         }
 
+        .form-loading {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            align-content: start;
+            gap: 18px;
+            padding: 36px;
+            background: #fff;
+            transition: opacity .3s ease, visibility .3s ease;
+        }
+
+        .form-loading[hidden] { display: none; }
+
+        .skeleton {
+            height: 18px;
+            max-width: 420px;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #eee 25%, #f8f8f8 50%, #eee 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.4s ease-in-out infinite;
+        }
+
+        .skeleton.short { max-width: 220px; }
+        .skeleton.tall { height: 54px; max-width: 100%; }
+
         .fallback {
-            color: #bbb;
+            color: #c7c7c7;
             font-size: 14px;
             line-height: 1.8;
             margin: 22px 0;
         }
 
-        .fallback a {
-            color: #ff5555;
-        }
+        .fallback a { color: #ff7777; text-underline-offset: 3px; }
+        .fallback a:hover { color: #ffaaaa; }
 
-        /* FOOTER */
         footer {
             text-align: center;
-            color: #888;
+            color: #aaa;
             border-top: 1px solid #292929;
             padding: 25px 15px;
             font-size: 13px;
         }
 
-        /* MOBILE */
+        @keyframes shimmer {
+            to { background-position: -200% 0; }
+        }
+
+        @keyframes content-enter {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            main:hover::before { opacity: 1; }
+        }
+
         @media (max-width: 600px) {
-            header {
-                padding: 15px 4%;
-            }
+            header { padding: 15px 4%; }
+            .brand { gap: 8px; }
+            .brand-logo { width: 45px; height: 45px; }
+            .brand-name { font-size: 16px; }
+            .back-link { padding: 9px 10px; font-size: 12px; }
+            main { margin: 38px auto; }
+            .tag { letter-spacing: 2px; }
+            iframe, .form-box { height: 750px; min-height: 750px; }
+            .form-loading { padding: 24px; }
+        }
 
-            .brand {
-                gap: 8px;
-            }
-
-            .brand-logo {
-                width: 45px;
-                height: 45px;
-            }
-
-            .brand-name {
-                font-size: 16px;
-            }
-
-            .back-link {
-                padding: 9px 10px;
-                font-size: 12px;
-            }
-
-            main {
-                margin: 38px auto;
-            }
-
-            .tag {
-                letter-spacing: 2px;
-            }
-
-            iframe {
-                height: 750px;
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
             }
         }
     </style>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- HEADER WITH YOUR LOGO -->
     <header>
         <div class="brand">
             <img
                 src="https://i.postimg.cc/RZpHJH27/Whats-App-Image-2026-08-27-at-11-05-27-PM.jpg"
-                alt="Silent Strokes Logo"
+                alt="Silent Strokes logo"
                 class="brand-logo"
+                width="58"
+                height="58"
             >
-
-            <div class="brand-name">
-                SILENT <span>STROKES</span>
-            </div>
+            <div class="brand-name">SILENT <span>STROKES</span></div>
         </div>
 
-        <a class="back-link" href="./">
-            ← Back to Home
-        </a>
+        <a class="back-link" href="./">← Back to Home</a>
     </header>
 
-    <!-- PAGE CONTENT -->
-    <main>
+    <main id="main-content" tabindex="-1">
         <div class="tag">THE CREATIVE COMMUNITY</div>
-
         <h1>Your Voice Matters.</h1>
-
         <p class="description">
             Have an idea, suggestion, or feedback for Silent Strokes?
             Fill out the form below and share your thoughts with us.
         </p>
 
-        <!-- EMBEDDED MICROSOFT FORM -->
         <div class="form-box">
+            <div class="form-loading" id="formLoading" aria-hidden="true">
+                <div class="skeleton short"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton tall"></div>
+                <div class="skeleton tall"></div>
+                <div class="skeleton"></div>
+            </div>
             <iframe
                 src="https://forms.cloud.microsoft/r/akZBaMX6Rn?embed=true"
                 title="Silent Strokes Community Form"
                 loading="lazy"
-                allowfullscreen>
-            </iframe>
+                allowfullscreen
+            ></iframe>
         </div>
 
         <p class="fallback">
             Having trouble viewing the form?
-            <a
-                href="https://forms.cloud.microsoft/r/akZBaMX6Rn"
-                target="_blank"
-                rel="noopener noreferrer">
+            <a href="https://forms.cloud.microsoft/r/akZBaMX6Rn" target="_blank" rel="noopener noreferrer">
                 Open the form directly
             </a>.
         </p>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         © 2026 Silent Strokes — Where Every Stroke Tells a Story.
     </footer>
 
+    <script>
+        const formFrame = document.querySelector(".form-box iframe");
+        const formLoading = document.getElementById("formLoading");
+        formFrame.addEventListener("load", () => formLoading.hidden = true, { once: true });
+
+        const main = document.querySelector("main");
+        const canTrackPointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+        if (canTrackPointer && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            main.addEventListener("pointermove", (event) => {
+                const bounds = main.getBoundingClientRect();
+                main.style.setProperty("--pointer-x", `${event.clientX - bounds.left}px`);
+                main.style.setProperty("--pointer-y", `${event.clientY - bounds.top}px`);
+            });
+        }
+    </script>
 </body>
 </html>
-
