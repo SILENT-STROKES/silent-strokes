@@ -760,8 +760,10 @@
       }
     }
 
+
 /* ==========================================
-   SILENT STROKES — PROFESSIONAL VIDEO SECTION
+   SILENT STROKES — VIDEOS SECTION
+   MATCHED TO EXISTING HTML
 ========================================== */
 
 .videos-section {
@@ -775,11 +777,11 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
-    width: 100%;
     align-items: stretch;
+    width: 100%;
 }
 
-/* VIDEO CARD */
+/* VIDEO CARDS */
 
 .video-card {
     display: flex;
@@ -792,10 +794,10 @@
     border: 1px solid #dedede;
     border-radius: 19px;
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.015);
+    box-shadow: 0 2px 8px rgba(0,0,0,.02);
 
-    outline: none;
     box-sizing: border-box;
+    outline: none;
 
     transition:
         transform .3s ease,
@@ -803,15 +805,15 @@
         border-color .3s ease;
 }
 
-.video-card:hover {
+.video-card.reveal.visible:hover {
     transform: translateY(-5px);
-    border-color: #c7a15a;
+    border-color: #b08b45;
     box-shadow: 0 12px 28px rgba(0,0,0,.08);
 }
 
-/* THUMBNAIL */
+/* THUMBNAILS */
 
-.video-thumb {
+.video-thumbnail {
     position: relative;
     width: 100%;
     height: 208px;
@@ -821,23 +823,22 @@
     background: #202020;
 }
 
-.video-thumb img {
+.video-thumbnail img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-
     transition: transform .5s ease;
 }
 
-.video-card:hover .video-thumb img {
+.video-card:hover .video-thumbnail img {
     transform: scale(1.045);
 }
 
-/* CATEGORY BADGE */
+/* VIDEO BADGE */
 
-.video-label {
+.video-badge {
     position: absolute;
     top: 12px;
     left: 15px;
@@ -855,9 +856,9 @@
     text-transform: uppercase;
 }
 
-/* PLAY BUTTON */
+/* YOUTUBE PLAY BUTTON */
 
-.video-play {
+.play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -870,9 +871,7 @@
     align-items: center;
     justify-content: center;
 
-    transform: translate(-50%,-50%);
-
-    border: none;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
 
     background: rgba(255,255,255,.97);
@@ -880,35 +879,34 @@
 
     font-size: 21px;
 
-    transition:
-        background .3s ease,
-        color .3s ease,
-        transform .3s ease;
+    transition: background .3s ease,
+                color .3s ease,
+                transform .3s ease;
 }
 
-.video-card:hover .video-play {
+.video-card:hover .play-button {
     background: #b08b45;
-    color: white;
-    transform: translate(-50%,-50%) scale(1.1);
+    color: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* VIDEO CONTENT */
+/* VIDEO INFORMATION */
 
 .video-info {
     display: flex;
-    flex-direction: column;
     flex: 1;
     min-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
 
     padding: 19px 18px 17px;
-
     box-sizing: border-box;
 }
 
-/* PLATFORM */
+/* PLATFORM CATEGORY */
 
-.video-platform {
-    margin: 0 0 10px;
+.video-category {
+    margin-bottom: 10px;
 
     color: #b08b45;
 
@@ -918,7 +916,7 @@
     text-transform: uppercase;
 }
 
-/* TITLE */
+/* VIDEO TITLE */
 
 .video-info h3 {
     margin: 0 0 9px;
@@ -941,7 +939,7 @@
 
 /* WATCH LINK */
 
-.video-link {
+.watch-link {
     display: inline-block;
     width: fit-content;
     margin-top: auto;
@@ -955,13 +953,21 @@
     transition: color .25s ease;
 }
 
-.video-link:hover {
+.watch-link:hover {
     color: #b08b45;
 }
 
-/* INSTAGRAM STYLE */
+/* ==========================================
+   INSTAGRAM REELS
+========================================== */
 
-.video-card.instagram .video-thumb {
+.instagram-reel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: linear-gradient(
         135deg,
         #241022 0%,
@@ -971,19 +977,77 @@
     );
 }
 
-.video-card.instagram .video-platform,
-.video-card.instagram .video-link {
-    color: #d62976;
+/* INSTAGRAM SYMBOL */
+
+.instagram-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 76px;
+    color: rgba(255,255,255,.95);
+    line-height: 1;
+}
+
+/* INSTAGRAM PLAY BUTTON */
+
+.reel-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    border: 6px solid rgba(255,255,255,.95);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.95);
+    color: #111;
+
+    font-size: 18px;
+
+    transition: transform .3s ease,
+                background .3s ease;
+}
+
+.video-card:hover .reel-play {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: #fff;
+}
+
+/* INSTAGRAM TEXT */
+
+.instagram-link {
+    background: linear-gradient(
+        90deg,
+        #e1306c,
+        #833ab4,
+        #ff8a3d
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* REMOVE UNWANTED OUTLINES */
 
-.video-card:focus,
-.video-card:focus-within {
+.video-card:focus {
     outline: none;
 }
 
-/* TABLET */
+/* ==========================================
+   TABLET
+========================================== */
 
 @media (max-width: 900px) {
     .video-grid {
@@ -992,7 +1056,9 @@
     }
 }
 
-/* MOBILE */
+/* ==========================================
+   MOBILE
+========================================== */
 
 @media (max-width: 600px) {
     .videos-section {
@@ -1008,7 +1074,7 @@
         height: 370px;
     }
 
-    .video-thumb {
+    .video-thumbnail {
         height: 215px;
         min-height: 215px;
     }
@@ -1021,6 +1087,7 @@
         font-size: 19px;
     }
 }
+
    
     /* =====================================================
        INSTAGRAM
