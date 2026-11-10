@@ -363,7 +363,8 @@
       min-height: 650px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: 64px 0 60px;
       position: relative;
       z-index: 2;
     }
@@ -505,8 +506,49 @@
       );
     }
 
+    #home .hero-sound-toggle {
+      position: absolute;
+      top: 24px;
+      right: max(30px, calc((100vw - 1180px) / 2));
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 15px;
+      border: 1px solid rgba(17,17,17,.28);
+      border-radius: 999px;
+      background: rgba(255,255,255,.84);
+      color: #111;
+      font: 700 10px/1 "Inter", sans-serif;
+      letter-spacing: 1px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    #home .hero-sound-toggle:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+
     #home .hero {
       z-index: 2;
+    }
+
+    body.bw #home .hero-sound-toggle {
+      border-color: rgba(17,17,17,.35);
+      background: rgba(245,245,245,.88);
+      color: #111;
+    }
+
+    @media (max-width: 600px) {
+      #home .hero-sound-toggle {
+        top: 16px;
+        right: 18px;
+        min-height: 38px;
+        padding: 0 12px;
+      }
     }
 
     body.bw #home .hero-background-video {
@@ -2104,10 +2146,13 @@ body.bw .video-more-button:hover {
 
     <section id="home">
 
-            <video class="hero-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+            <video id="heroBackgroundVideo" class="hero-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
         <source src="/silent-strokes/assets/silent-strokes-intro.mp4" type="video/mp4">
       </video>
       <div class="hero-background-tint" aria-hidden="true"></div>
+      <button id="heroSoundToggle" class="hero-sound-toggle" type="button" aria-pressed="false" aria-label="Turn on background video sound">
+        SOUND OFF
+      </button>
 
       <div class="container hero">
 
@@ -3246,6 +3291,41 @@ body.bw .video-more-button:hover {
       themeButton.textContent =
         "COLOUR MODE";
 
+    }
+
+
+    /* HOMEPAGE BACKGROUND VIDEO SOUND */
+    const heroBackgroundVideo =
+      document.getElementById("heroBackgroundVideo");
+    const heroSoundToggle =
+      document.getElementById("heroSoundToggle");
+
+    if (heroBackgroundVideo && heroSoundToggle) {
+      const normalPlaybackSpeed = () => {
+        heroBackgroundVideo.defaultPlaybackRate = 1;
+        heroBackgroundVideo.playbackRate = 1;
+      };
+
+      normalPlaybackSpeed();
+      heroBackgroundVideo.addEventListener("loadedmetadata", normalPlaybackSpeed);
+
+      heroSoundToggle.addEventListener("click", () => {
+        const soundOn = heroBackgroundVideo.muted;
+        heroBackgroundVideo.muted = !soundOn;
+        heroSoundToggle.setAttribute("aria-pressed", String(soundOn));
+        heroSoundToggle.textContent = soundOn ? "SOUND ON" : "SOUND OFF";
+        heroSoundToggle.setAttribute(
+          "aria-label",
+          soundOn ? "Mute background video" : "Turn on background video sound"
+        );
+
+        if (soundOn) {
+          const playback = heroBackgroundVideo.play();
+          if (playback && typeof playback.catch === "function") {
+            playback.catch(() => {});
+          }
+        }
+      });
     }
 
 
