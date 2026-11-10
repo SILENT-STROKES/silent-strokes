@@ -1327,6 +1327,48 @@ body.bw .video-more-button:hover {
       text-transform: uppercase;
     }
 
+    .blog-feature-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 260px;
+    }
+
+    .blog-feature-art {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      background: #eee;
+    }
+
+    .blog-feature-art img {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .blog-feature-art figcaption {
+      padding: 9px 12px;
+      background: #fff;
+      color: #777;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    body.bw .blog-feature-art figcaption {
+      background: #f2f2f2;
+    }
+
+
     .blog-feature h3 {
       margin: 0 0 16px;
       font-size: clamp(25px, 3vw, 36px);
@@ -3136,8 +3178,17 @@ body.bw .video-more-button:hover {
         </div>
 
         <article class="blog-feature reveal">
-          <div>
+          <div class="blog-feature-visual">
             <span class="blog-feature-kicker">New journal entry · Creative practice</span>
+            <figure class="blog-feature-art">
+              <img
+                src="assets/gallery-art/artwork-03.webp"
+                alt="Graphite eye drawing from the Silent Strokes gallery"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>GRAPHITE SKETCH · ARTWORK 03</figcaption>
+            </figure>
           </div>
 
           <div class="blog-feature-copy">
