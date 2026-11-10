@@ -476,6 +476,105 @@
     }
 
 
+    /* INTRO VIDEO */
+    .intro-video-section {
+      padding: 86px 0;
+      border-top: 1px solid #ddd;
+      background: linear-gradient(135deg, #fff, #fffafa 58%, #f4f4f4);
+    }
+
+    .intro-video-layout {
+      display: grid;
+      grid-template-columns: minmax(230px, .78fr) minmax(0, 1.22fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .intro-video-title {
+      margin-top: 16px;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: .98;
+      letter-spacing: -3px;
+      font-weight: 300;
+    }
+
+    .intro-video-title strong {
+      font-weight: 800;
+      background: linear-gradient(90deg, #111, #b00000, #e00000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro-video-copy p {
+      max-width: 460px;
+      margin-top: 20px;
+      color: #666;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .intro-video-player {
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background: #111;
+      box-shadow: 0 18px 45px rgba(0,0,0,.10);
+    }
+
+    .intro-video-player video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      object-fit: contain;
+      background: #111;
+    }
+
+    body.bw .intro-video-section {
+      border-color: #ccc;
+      background: linear-gradient(135deg, #fff, #ededed 58%, #e3e3e3);
+    }
+
+    body.bw .intro-video-title strong {
+      background: linear-gradient(90deg, #111, #555, #000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.bw .intro-video-copy p {
+      color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .intro-video-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .intro-video-copy p {
+        max-width: 650px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .intro-video-section {
+        padding: 60px 0;
+      }
+
+      .intro-video-title {
+        letter-spacing: -2px;
+      }
+
+      .intro-video-player {
+        border-radius: 14px;
+      }
+
+      .intro-video-player video {
+        max-height: 70vh;
+      }
+    }
+
+
     /* =====================================================
        ABOUT
     ===================================================== */
@@ -2096,6 +2195,24 @@ body.bw .video-more-button:hover {
 
       </div>
 
+    </section>
+
+
+    <section class="intro-video-section" id="introduction" aria-labelledby="introVideoHeading">
+      <div class="container intro-video-layout">
+        <div class="intro-video-copy reveal">
+          <span class="section-label">MEET THE ARTIST</span>
+          <h2 class="intro-video-title" id="introVideoHeading">Behind <strong>Silent Strokes.</strong></h2>
+          <p>A short introduction to me, my artwork, and the story behind this website.</p>
+        </div>
+
+        <div class="intro-video-player reveal">
+          <video controls preload="metadata" playsinline aria-label="Silent Strokes introduction video">
+            <source src="/silent-strokes/assets/silent-strokes-intro.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+        </div>
+      </div>
     </section>
 
 
