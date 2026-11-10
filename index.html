@@ -1391,6 +1391,48 @@ body.bw .video-more-button:hover {
       margin-top: 0;
     }
 
+    .blog-feature-details {
+      margin-top: 18px;
+    }
+
+    .blog-feature-details summary {
+      display: inline-flex;
+      align-items: center;
+      color: #a00000;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .blog-feature-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .blog-feature-details summary:focus-visible {
+      outline: 2px solid #a00000;
+      outline-offset: 5px;
+      border-radius: 2px;
+    }
+
+    .blog-feature-summary-open {
+      display: none;
+    }
+
+    .blog-feature-details[open] .blog-feature-summary-closed {
+      display: none;
+    }
+
+    .blog-feature-details[open] .blog-feature-summary-open {
+      display: inline;
+    }
+
+    .blog-feature-full {
+      padding-top: 2px;
+    }
+
+
     body.bw .blog-feature {
       border-color: #ccc;
       background: linear-gradient(135deg, #f1f1f1, #fff);
@@ -3194,8 +3236,16 @@ body.bw .video-more-button:hover {
           <div class="blog-feature-copy">
             <h3>Finding Ideas in a Sketch</h3>
             <p>Not every drawing starts with a complete plan. Sometimes I begin with a few loose lines and let the idea take shape as I go. A sketch gives me room to explore expressions, shapes, and details before I decide what the finished piece should become.</p>
-            <p>If a line does not work, I can change it. If something feels right, I build on it. That process helps me learn with every drawing and keeps creating fun.</p>
-            <p>I share anime art, sketches, illustrations, and videos here because each piece is part of that journey—one stroke at a time.</p>
+            <details class="blog-feature-details">
+              <summary>
+                <span class="blog-feature-summary-closed">READ ARTICLE →</span>
+                <span class="blog-feature-summary-open">CLOSE ARTICLE ↑</span>
+              </summary>
+              <div class="blog-feature-full">
+                <p>If a line does not work, I can change it. If something feels right, I build on it. That process helps me learn with every drawing and keeps creating fun.</p>
+                <p>I share anime art, sketches, illustrations, and videos here because each piece is part of that journey—one stroke at a time.</p>
+              </div>
+            </details>
           </div>
         </article>
 
