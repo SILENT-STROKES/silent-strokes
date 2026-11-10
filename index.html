@@ -476,39 +476,50 @@
     }
 
 
-    /* HOMEPAGE INTRO VIDEO */
-    .hero-video {
-      width: min(100%, 640px);
-      margin-top: 26px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      border-radius: 18px;
-      background: #111;
-      box-shadow: 0 16px 42px rgba(0,0,0,.12);
+    /* HOMEPAGE BACKGROUND VIDEO */
+    #home {
+      isolation: isolate;
     }
 
-    .hero-video video {
-      display: block;
+    #home .hero-background-video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
       width: 100%;
-      max-height: 380px;
-      background: #111;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
+      opacity: .72;
+      pointer-events: none;
     }
 
-    body.bw .hero-video {
-      border-color: #999;
+    #home .hero-background-tint {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        rgba(255,255,255,.78) 0%,
+        rgba(255,255,255,.66) 50%,
+        rgba(255,255,255,.75) 100%
+      );
+    }
+
+    #home .hero {
+      z-index: 2;
+    }
+
+    body.bw #home .hero-background-video {
       filter: grayscale(1);
     }
 
-    @media (max-width: 600px) {
-      .hero-video {
-        margin-top: 22px;
-        border-radius: 14px;
-      }
-
-      .hero-video video {
-        max-height: 320px;
-      }
+    body.bw #home .hero-background-tint {
+      background: linear-gradient(
+        90deg,
+        rgba(245,245,245,.80) 0%,
+        rgba(245,245,245,.68) 50%,
+        rgba(245,245,245,.78) 100%
+      );
     }
 
 
@@ -2093,6 +2104,11 @@ body.bw .video-more-button:hover {
 
     <section id="home">
 
+            <video class="hero-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+        <source src="/silent-strokes/assets/silent-strokes-intro.mp4" type="video/mp4">
+      </video>
+      <div class="hero-background-tint" aria-hidden="true"></div>
+
       <div class="container hero">
 
         <span class="label">
@@ -2113,12 +2129,7 @@ body.bw .video-more-button:hover {
           a student, artist, and creator sharing my passion
           for <strong>anime art, sketches, illustrations, and videos.</strong>
         </p>
-        <div class="hero-video" id="introduction">
-          <video autoplay muted controls playsinline preload="auto" aria-label="Silent Strokes introduction video">
-            <source src="/silent-strokes/assets/silent-strokes-intro.mp4" type="video/mp4">
-            Your browser does not support HTML video.
-          </video>
-        </div>
+        
 
 
         <div class="buttons">
