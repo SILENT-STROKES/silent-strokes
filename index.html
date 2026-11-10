@@ -781,6 +781,60 @@
     width: 100%;
 }
 
+.video-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.video-more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 1px solid #111;
+    border-radius: 30px;
+    background: #111;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.video-more-button:hover {
+    transform: translateY(-3px);
+    border-color: #b08b45;
+    background: #b08b45;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.video-more-button:focus-visible {
+    outline: 3px solid #b08b45;
+    outline-offset: 4px;
+}
+
+body.bw .video-more-button {
+    border-color: #f2f2f2;
+    background: #f2f2f2;
+    color: #111;
+}
+
+body.bw .video-more-button:hover {
+    border-color: #b08b45;
+    background: #b08b45;
+    color: #fff;
+}
+
+@media(max-width:600px) {
+    .video-more { margin-top: 26px; }
+    .video-more-button { min-height: 46px; }
+}
+
 /* VIDEO CARDS */
 
 .video-card {
@@ -2574,6 +2628,18 @@
           </a>
 
 
+        </div>
+
+              <div class="video-more">
+          <a
+            class="video-more-button"
+            href="https://www.youtube.com/@sailaksh_drawin_7_official"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch more videos on the Silent Strokes YouTube channel"
+          >
+            Watch More <span aria-hidden="true">↗</span>
+          </a>
         </div>
 
       </div>
