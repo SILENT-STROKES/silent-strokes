@@ -493,21 +493,7 @@
       pointer-events: none;
     }
 
-    #home .hero-background-tint {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      background: linear-gradient(
-        90deg,
-        rgba(255,255,255,.68) 0%,
-        rgba(255,255,255,.52) 32%,
-        rgba(255,255,255,.12) 58%,
-        rgba(255,255,255,0) 82%
-      );
-    }
-
-    #home .hero-sound-toggle {
+#home .hero-sound-toggle {
       position: absolute;
       top: 24px;
       right: max(30px, calc((100vw - 1180px) / 2));
@@ -556,18 +542,7 @@
       filter: grayscale(1);
     }
 
-    body.bw #home .hero-background-tint {
-      background: linear-gradient(
-        90deg,
-        rgba(245,245,245,.72) 0%,
-        rgba(245,245,245,.55) 32%,
-        rgba(245,245,245,.14) 58%,
-        rgba(245,245,245,0) 82%
-      );
-    }
-
-
-    /* =====================================================
+/* =====================================================
        ABOUT
     ===================================================== */
 
@@ -2050,6 +2025,109 @@ body.bw .video-more-button:hover {
   .owner-studio-entry:hover,.owner-studio-entry:focus-visible{opacity:1;border-color:#b40000;outline-offset:3px}
   footer .container.footer-inner{flex-wrap:wrap}
   .owner-studio-entry{flex-basis:100%;width:max-content;justify-content:center}
+
+
+
+    /* Full visibility for the homepage background video */
+    #home {
+      align-items: flex-start;
+    }
+
+    #home::before,
+    #home::after {
+      display: none;
+    }
+
+    #home .hero-background-video {
+      opacity: 1;
+      filter: none;
+    }
+
+    #home .hero {
+      justify-content: flex-start;
+      padding-top: 28px;
+    }
+
+    #home .hero .label,
+    #home .hero .hero-title,
+    #home .hero .hero-description {
+      color: #fff;
+      text-shadow: 0 2px 14px rgba(0,0,0,.85);
+    }
+
+    #home .hero h1 {
+      color: #fff;
+      text-shadow: 0 3px 18px rgba(0,0,0,.72);
+    }
+
+    #home .hero h1 span {
+      background: linear-gradient(100deg, #fff6d8, #e5b640, #fff0b5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #home .hero-description strong {
+      color: #fff;
+    }
+
+    #home .hero .button {
+      border-color: rgba(255,255,255,.92);
+      color: #fff;
+    }
+
+    #home .hero .button.primary {
+      border-color: #fff;
+      background: #fff;
+      color: #111;
+    }
+
+    #home .hero .button:not(.primary) {
+      background: rgba(0,0,0,.2);
+    }
+
+    #home .hero .button:not(.primary):hover {
+      background: #fff;
+      color: #111;
+    }
+
+    #home .scroll-indicator {
+      color: #fff;
+      text-shadow: 0 1px 8px rgba(0,0,0,.8);
+    }
+
+    #home .scroll-indicator::before {
+      background: rgba(255,255,255,.9);
+    }
+
+    body.bw #home .hero-background-video {
+      opacity: 1;
+      filter: grayscale(1);
+    }
+
+    body.bw #home .hero .label,
+    body.bw #home .hero .hero-title,
+    body.bw #home .hero .hero-description,
+    body.bw #home .hero h1 {
+      color: #fff;
+      text-shadow: 0 2px 14px rgba(0,0,0,.9);
+    }
+
+    body.bw #home .hero h1 span {
+      background: linear-gradient(100deg, #fff, #ccc, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.bw #home .hero-description strong {
+      color: #fff;
+    }
+
+    body.bw #home .hero .button.primary {
+      border-color: #fff;
+      background: #fff;
+      color: #111;
+    }
+
 </style>
 </head>
 
@@ -2151,7 +2229,6 @@ body.bw .video-more-button:hover {
             <video id="heroBackgroundVideo" class="hero-background-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
         <source src="/silent-strokes/assets/silent-strokes-intro.mp4" type="video/mp4">
       </video>
-      <div class="hero-background-tint" aria-hidden="true"></div>
       <button id="heroSoundToggle" class="hero-sound-toggle" type="button" aria-pressed="false" aria-label="Turn on background video sound">
         SOUND OFF
       </button>
