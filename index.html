@@ -1307,6 +1307,52 @@ body.bw .video-more-button:hover {
       color: #a00000;
     }
 
+    .blog-card-details {
+      margin-top: 30px;
+    }
+
+    .blog-card-details summary {
+      display: inline-flex;
+      align-items: center;
+      color: #a00000;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .blog-card-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .blog-card-details summary:focus-visible {
+      outline: 2px solid #a00000;
+      outline-offset: 5px;
+      border-radius: 2px;
+    }
+
+    .blog-card-summary-open {
+      display: none;
+    }
+
+    .blog-card-details[open] .blog-card-summary-closed {
+      display: none;
+    }
+
+    .blog-card-details[open] .blog-card-summary-open {
+      display: inline;
+    }
+
+    .blog-card-full {
+      margin-top: 12px;
+    }
+
+    .blog-card-full p + p {
+      margin-top: 12px;
+    }
+
+
     .blog-feature {
       margin-top: 28px;
       padding: clamp(24px, 4vw, 40px);
@@ -3165,9 +3211,16 @@ body.bw .video-more-button:hover {
               creative journey.
             </p>
 
-            <a href="#home">
-              READ ARTICLE →
-            </a>
+            <details class="blog-card-details">
+              <summary>
+                <span class="blog-card-summary-closed">READ ARTICLE →</span>
+                <span class="blog-card-summary-open">CLOSE ARTICLE ↑</span>
+              </summary>
+              <div class="blog-card-full">
+                <p>For me, drawing is a way to explore ideas and characters I enjoy. Anime art and sketches give me room to practise, notice expressions and shapes, and work toward the image I have in mind.</p>
+                <p>I still have plenty to learn, and every page gives me something new to try. Silent Strokes is where I share that progress and the creative experiments along the way.</p>
+              </div>
+            </details>
 
           </article>
 
@@ -3188,9 +3241,16 @@ body.bw .video-more-button:hover {
               I create.
             </p>
 
-            <a href="#home">
-              READ ARTICLE →
-            </a>
+            <details class="blog-card-details">
+              <summary>
+                <span class="blog-card-summary-closed">READ ARTICLE →</span>
+                <span class="blog-card-summary-open">CLOSE ARTICLE ↑</span>
+              </summary>
+              <div class="blog-card-full">
+                <p>Anime characters are full of expression, and that is what I enjoy exploring in a drawing. I pay attention to the shapes and mood I want to show, then build the details around that idea.</p>
+                <p>Each piece gives me a chance to experiment with line, proportion, and shading. I keep adjusting and learning as I go, aiming to make artwork that feels expressive and personal.</p>
+              </div>
+            </details>
 
           </article>
 
@@ -3210,9 +3270,16 @@ body.bw .video-more-button:hover {
               continuing to focus on school and learning.
             </p>
 
-            <a href="#home">
-              READ ARTICLE →
-            </a>
+            <details class="blog-card-details">
+              <summary>
+                <span class="blog-card-summary-closed">READ ARTICLE →</span>
+                <span class="blog-card-summary-open">CLOSE ARTICLE ↑</span>
+              </summary>
+              <div class="blog-card-full">
+                <p>Studying and drawing both matter to me. Some days need more attention for schoolwork; at other times I can make space for a sketch. I try to keep moving forward in both, even when the steps are small.</p>
+                <p>Studies help me build knowledge for the future, while art gives me a way to explore ideas and express myself. Making room for both helps me keep learning and creating.</p>
+              </div>
+            </details>
 
           </article>
 
