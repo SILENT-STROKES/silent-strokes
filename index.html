@@ -2018,7 +2018,41 @@ body.bw .video-more-button:hover {
     body.bw #drawing-pad { background: #e9e9e9; }
     @media (max-width: 600px) { #drawing-pad { padding: 72px 0; } #drawing-pad .draw-workspace { padding: 10px; border-radius: 15px; } #drawing-pad canvas { height: 340px; } #drawing-pad .draw-toolbar { align-items: flex-start; } #drawing-pad .draw-tool-group { width: 100%; } #drawing-pad .draw-bottom { align-items: flex-start; flex-direction: column; } }
 
-  </style>
+  
+    /* Keep only the secondary homepage button readable over every video frame. */
+    #home .hero .buttons a.button:not(.primary) {
+      border-color: rgba(255,255,255,.98);
+      background: rgba(0,0,0,.68);
+      color: #fff !important;
+      -webkit-text-fill-color: #fff;
+      text-shadow: 0 1px 8px rgba(0,0,0,.9);
+      box-shadow: 0 0 0 1px rgba(0,0,0,.45);
+    }
+
+    #home .hero .buttons a.button:not(.primary):hover,
+    #home .hero .buttons a.button:not(.primary):focus-visible {
+      border-color: #fff;
+      background: #fff;
+      color: #111 !important;
+      -webkit-text-fill-color: #111;
+      text-shadow: none;
+      box-shadow: none;
+    }
+
+    body.bw #home .hero .buttons a.button:not(.primary) {
+      background: rgba(255,255,255,.18);
+      color: #fff !important;
+      -webkit-text-fill-color: #fff;
+    }
+
+    body.bw #home .hero .buttons a.button:not(.primary):hover,
+    body.bw #home .hero .buttons a.button:not(.primary):focus-visible {
+      background: #fff;
+      color: #111 !important;
+      -webkit-text-fill-color: #111;
+    }
+
+</style>
 
 <style>
   .owner-studio-entry{display:inline-flex;align-items:center;gap:.45rem;margin:1.1rem auto .25rem;padding:.55rem .85rem;border:1px solid rgba(128,128,128,.28);border-radius:999px;color:inherit;text-decoration:none;font-size:.72rem;letter-spacing:.04em;opacity:.72;transition:opacity .2s,border-color .2s}
