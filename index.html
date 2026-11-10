@@ -1307,6 +1307,70 @@ body.bw .video-more-button:hover {
       color: #a00000;
     }
 
+    .blog-feature {
+      margin-top: 28px;
+      padding: clamp(24px, 4vw, 40px);
+      display: grid;
+      grid-template-columns: minmax(150px, .65fr) minmax(0, 1.8fr);
+      gap: 20px 38px;
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f7f7f7, #fffafa);
+    }
+
+    .blog-feature-kicker {
+      color: #a00000;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .blog-feature h3 {
+      margin: 0 0 16px;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .blog-feature-copy {
+      max-width: 760px;
+    }
+
+    .blog-feature-copy p {
+      margin-top: 12px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .blog-feature-copy p:first-child {
+      margin-top: 0;
+    }
+
+    body.bw .blog-feature {
+      border-color: #ccc;
+      background: linear-gradient(135deg, #f1f1f1, #fff);
+    }
+
+    @media (max-width: 700px) {
+      .blog-feature {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 24px 20px;
+      }
+
+      .blog-feature h3 {
+        font-size: 27px;
+      }
+
+      .blog-feature-copy p {
+        font-size: 14px;
+      }
+    }
+
+
 
     /* =====================================================
        CONTACT
@@ -3070,6 +3134,20 @@ body.bw .video-more-button:hover {
 
 
         </div>
+
+        <article class="blog-feature reveal">
+          <div>
+            <span class="blog-feature-kicker">New journal entry · Creative practice</span>
+          </div>
+
+          <div class="blog-feature-copy">
+            <h3>Finding Ideas in a Sketch</h3>
+            <p>Not every drawing starts with a complete plan. Sometimes I begin with a few loose lines and let the idea take shape as I go. A sketch gives me room to explore expressions, shapes, and details before I decide what the finished piece should become.</p>
+            <p>If a line does not work, I can change it. If something feels right, I build on it. That process helps me learn with every drawing and keeps creating fun.</p>
+            <p>I share anime art, sketches, illustrations, and videos here because each piece is part of that journey—one stroke at a time.</p>
+          </div>
+        </article>
+
 
       </div>
 
