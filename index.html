@@ -2468,6 +2468,28 @@ body.bw .video-more-button:hover {
     }
 
 </style>
+
+<style>
+  /* Keep the hero heading readable over light or changing video frames. */
+  #home::before {
+    display: block; z-index: 1; inset: 0; width: auto; height: auto; border-radius: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 48%, rgba(255,255,255,.18) 100%);
+  }
+  #home::after { display: none; }
+  #home .hero-background-video { opacity: .35; }
+  #home .hero .label, #home .hero .hero-title, #home .hero .hero-description { color: #222; text-shadow: none; }
+  #home .hero h1 { color: #111; text-shadow: none; }
+  #home .hero h1 span { background: linear-gradient(100deg, #111, #9d1717, #c00000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  #home .hero-description strong { color: #111; }
+  #home .hero .button { border-color: #111; color: #111; }
+  #home .hero .button.primary { border-color: #111; background: #111; color: #fff; }
+  #home .hero .button:not(.primary) { background: rgba(255,255,255,.88); }
+  #home .hero .button:not(.primary):hover { background: #111; color: #fff; }
+  #home .scroll-indicator { color: #444; text-shadow: none; }
+  #home .scroll-indicator::before { background: #777; }
+  body.bw #home .hero-background-video { filter: grayscale(1); }
+  body.bw #home .hero h1 span { background: linear-gradient(100deg, #111, #555, #111); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+</style>
 </head>
 
 
